@@ -1,0 +1,131 @@
+.team__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--sidebar-width);
+    padding-top: 7.5rem;
+    padding-bottom: 6.5rem;
+}
+
+.team__top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.team__heading {
+    font-weight: 500;
+    font-size: 4.7rem;
+    line-height: 1.2;
+    font-family: var(--orchidea);
+    margin-right: 3rem;
+}
+
+.team__heading-link {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: 1rem;
+        height: 1.4rem;
+        flex-shrink: 0;
+        margin-left: 4rem;
+        fill: #677571;
+        margin-top: 1rem;
+    }
+}
+
+.team__slider-controls {
+    display: flex;
+    align-items: center;
+}
+
+.team__slider-controls-btn {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-family: var(--orchidea);
+    letter-spacing: 0.3rem;
+    text-transform: lowercase;
+    color: #2d423c;
+    transition: color 0.2s;
+
+    &.disabled {
+        color: #a0a6a2;
+        cursor: default;
+    }
+}
+
+.team__slider-controls-divider {
+    width: 6.8rem;
+    height: 1px;
+    background-color: #a0a6a2;
+    margin: 0 2.4rem;
+    flex-shrink: 0;
+}
+
+.team__cards {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.team__card {
+    width: 28.4rem;
+    margin-right: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+    touch-action: pan-x pinch-zoom;
+
+    .no-touch &:hover {
+        .team__card-image-container {
+            background-color: #fff;
+        }
+
+        .team__card-image {
+            filter: grayscale(0%);
+        }
+    }
+}
+
+.team__card-image-container {
+    position: relative;
+    background-color: #75837f;
+    transition: background-color 0.2s;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    height: 38.2rem;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8rem), calc(100% - 2.8rem) 100%, 0 100%);
+}
+
+.team__card-image {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: auto;
+    width: auto;
+    height: 32rem;
+    transform: translateX(-50%);
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: filter .2s;
+    @include objectFitContainBottom();
+}
+
+.team__card-name {
+    font-weight: 300;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    font-family: var(--orchidea);
+    margin-bottom: 1rem;
+}
+
+.team__card-role {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
