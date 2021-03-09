@@ -10,14 +10,18 @@ export default function stickyLogo() {
     if (!stickyLogo) return;
 
     
-
+    ScrollTrigger.matchMedia({
+        '(min-width: 641px)': () => {
+            ScrollTrigger.create({
+                trigger: stickyLogo,
+                start: () => `top top+=${parseInt(window.getComputedStyle(pageFooterContent).paddingTop, 10)}px`,
+                endTrigger: 'html',
+                end: 'bottom bottom',
+                pin: true
+            });
+        }
+    })
    
 
-    ScrollTrigger.create({
-        trigger: stickyLogo,
-        start: () => `top top+=${parseInt(window.getComputedStyle(pageFooterContent).paddingTop, 10)}px`,
-        endTrigger: 'html',
-        end: 'bottom bottom',
-        pin: true
-    });
+   
 }

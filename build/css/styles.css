@@ -1011,7 +1011,11 @@ button.swiper-pagination-bullet {
   --orchidea: 'Orchidea Pro', sans-serif; }
   @media only screen and (max-width: 1024px) {
     :root {
-      --content-padding: 4rem; } }
+      --content-padding: 4rem;
+      --sidebar-width: 25rem; } }
+  @media only screen and (max-width: 768px) {
+    :root {
+      --sidebar-width: 20rem; } }
   @media only screen and (max-width: 640px) {
     :root {
       --content-padding: 2.5rem; } }
@@ -1027,16 +1031,16 @@ html {
       font-size: 9px; } }
   @media only screen and (max-width: 1200px) {
     html {
-      font-size: 7px; } }
+      font-size: 8px; } }
   @media only screen and (max-width: 1024px) {
     html {
-      font-size: 8px; } }
+      font-size: 7px; } }
   @media only screen and (max-width: 768px) {
     html {
-      font-size: 7px; } }
+      font-size: 6px; } }
   @media screen and (max-width: 680px) {
     html {
-      font-size: 6px; } }
+      font-size: 5px; } }
   @media only screen and (max-width: 640px) {
     html {
       font-size: 10px; } }
@@ -2099,7 +2103,7 @@ select:-webkit-autofill:focus {
       flex-shrink: 0;
   margin-left: 1.7rem;
   position: relative;
-  bottom: -0.35rem; }
+  bottom: -0.4rem; }
   @media only screen and (max-width: 640px) {
     .page-footer__made-by-logo {
       width: 6.7rem;
@@ -2123,6 +2127,9 @@ select:-webkit-autofill:focus {
   padding-left: var(--sidebar-width);
   padding-bottom: 6rem;
   position: relative; }
+  @media only screen and (max-width: 768px) {
+    .intro__content {
+      min-height: auto; } }
   @media only screen and (max-width: 640px) {
     .intro__content {
       padding: 0;

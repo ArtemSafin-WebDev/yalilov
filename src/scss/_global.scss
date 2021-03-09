@@ -16,6 +16,11 @@
 
     @include breakpoint(tablet) {
         --content-padding: 4rem;
+        --sidebar-width: 25rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        --sidebar-width: 20rem;
     }
 
     @include breakpoint(mobile) {
@@ -39,19 +44,19 @@ html {
     }
 
     @include breakpoint(laptop) {
-        font-size: 7px;
-    }
-
-    @include breakpoint(tablet) {
         font-size: 8px;
     }
 
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
         font-size: 7px;
     }
 
-    @media screen and (max-width: 680px) {
+    @include breakpoint(small-tablet) {
         font-size: 6px;
+    }
+
+    @media screen and (max-width: 680px) {
+        font-size: 5px;
     }
 
     @include breakpoint(mobile) {
