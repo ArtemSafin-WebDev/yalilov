@@ -1,6 +1,5 @@
 import gsap from 'gsap';
 import { debounce } from 'lodash';
-import { primaryInput } from 'detect-it';
 
 class CardSlider {
     constructor(element) {
@@ -45,21 +44,12 @@ class CardSlider {
         this.cardWidth = this.cards[0].offsetWidth;
         this.cardLargeWidth = this.cardWidth * this.scaleMultiplier;
         this.threshold = this.cardWidth * 0.3;
-      
+
         this.margin = parseInt(window.getComputedStyle(this.cards[0]).marginRight, 10);
         this.thresholdReached = false;
         this.cloneIndex = this.originalCards.length;
         this.doneCloning = false;
         this.debug = true;
-
-        if (this.debug) {
-            console.log('Cards wrapper', this.cardsWrapper);
-            console.log('Cards', this.cards);
-            console.log('Card positions', this.cardsPositions);
-            console.log('Card width', this.cardWidth);
-            console.log('Threshold', this.threshold);
-            console.log('Margin', this.margin);
-        }
 
         this.initializeSlider();
 
@@ -197,7 +187,7 @@ class CardSlider {
             position: 0,
             opacity: 1,
             scale: 1,
-            width: 0
+            width: card.offsetWidth
         }));
 
         this.cardWidth = this.cards[0].offsetWidth;
@@ -287,7 +277,7 @@ class CardSlider {
 
         this.locked = true;
 
-        console.log('Setting index', index)
+        console.log('Setting index', index);
 
         const prevIndex = this.activeIndex;
 
@@ -492,25 +482,24 @@ class CardSlider {
         event.preventDefault();
         if (!this.pointerDown) return;
 
-        console.log('Dragmove')
+        if (this.debug) {
+            console.log('Dragmove');
+        }
+
         this.moveX = event.pageX;
         this.offset = this.moveX - this.startX;
         this.direction = this.offset > 0 ? 'right' : 'left';
-
-
 
         this.translateSlides();
 
         if (Math.abs(this.offset) >= this.threshold) {
             this.thresholdReached = true;
-            console.log('Threshold reached');
+
             if (this.debug) {
                 console.log('Threshold reached');
             }
-            
-            this.handleDragEnd();
 
-           
+            this.handleDragEnd();
         }
     };
 
@@ -530,11 +519,9 @@ class CardSlider {
             } else if (this.direction === 'right' && this.cards[this.activeIndex - 1]) {
                 this.setActiveSlide(this.activeIndex - 1);
             } else {
-                console.log('Threshold reached returning to original positions', this.threshold)
                 this.translateToOriginalPositions();
             }
         } else {
-            console.log('Threshold not reached returning to original positions', this.threshold)
             this.translateToOriginalPositions();
         }
 
@@ -548,13 +535,14 @@ class CardSlider {
 
         if (Math.abs(this.offset) > 10) {
             this.filterClicks = true;
-            // console.log('Blocking clicks')
+
             setTimeout(() => {
                 this.filterClicks = false;
-                // console.log('Allowing clicks')
             }, 300);
         } else {
-            // console.log('Clicks not blocked', this.offset)
+            if (this.debug) {
+                console.log('Clicks not blocked', this.offset);
+            }
         }
 
         this.offset = 0;
@@ -573,14 +561,12 @@ class CardSlider {
 
         this.cardsWrapper.addEventListener('click', this.preventPhantomClicks);
 
-        if (!(primaryInput === 'touch')) {
-            window.addEventListener(
-                'resize',
-                debounce(() => {
-                    this.resetSlider();
-                }, 200)
-            );
-        }
+        window.addEventListener(
+            'resize',
+            debounce(() => {
+                this.resetSlider();
+            }, 200)
+        );
 
         if (this.slideToClickedSlides) {
             this.cardsWrapper.addEventListener('click', this.handleCardsClick);

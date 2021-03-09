@@ -1,3 +1,9 @@
+.page-footer {
+    @include breakpoint(mobile) {
+        background: rgba(#183029, 0.5);
+    }
+}
+
 .page-footer__content {
     min-height: 100vh;
     color: white;
@@ -7,6 +13,12 @@
     padding-bottom: 7.5rem;
     position: relative;
     padding-top: 9rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 0;
+    }
 }
 
 .page-footer__copyright {
@@ -16,6 +28,16 @@
     font-weight: 300;
     font-size: 1.8rem;
     line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        position: static;
+        left: auto;
+        bottom: auto;
+        font-feature-settings: 'case' on;
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .page-footer__top-row {
@@ -24,12 +46,29 @@
     justify-content: space-between;
     padding-bottom: 6rem;
     border-bottom: 1px solid rgba(white, 0.3);
+
+    @include breakpoint(mobile) {
+        display: grid;
+        justify-content: initial;
+        padding-bottom: 5.4rem;
+        border: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: 'logo language' 'social social';
+        grid-column-gap: 2rem;
+        grid-row-gap: 5rem;
+    }
 }
 
 .page-footer__languages {
     display: flex;
     align-items: baseline;
     margin-right: 3rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        grid-area: language;
+        justify-self: flex-end;
+    }
 }
 
 .page-footer__languages-link {
@@ -40,6 +79,10 @@
     color: rgba(white, 0.3);
     margin-right: 3rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin-right: 2.5rem;
+    }
     &:last-child {
         margin-right: 0;
     }
@@ -62,8 +105,26 @@
 .page-footer__social {
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        grid-area: social;
+        justify-content: space-between;
+    }
 }
 
+.page-footer__logo {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+        grid-area: logo;
+    }
+}
+
+.page-footer__logo-image {
+    width: 11.1rem;
+    height: auto;
+    display: block;
+}
 .page-footer__social-link {
     color: white;
     flex-shrink: 0;
@@ -85,30 +146,57 @@
         width: 1.6rem;
         height: 1.6rem;
         fill: currentColor;
+
+        @include breakpoint(mobile) {
+            width: 2rem;
+            height: 2rem;
+            fill: #c7cccb;
+        }
     }
 }
 
 .page-footer__nav {
     padding-top: 18rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        margin-bottom: 5.8rem;
+    }
 }
 
 .page-footer__nav-row {
     display: flex;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 6rem;
+    }
 }
 .page-footer__nav-col {
-    &:nth-child(1) {
-        width: 20rem;
-        margin-right: 16rem;
+    @include breakpointMF(small-tablet) {
+        &:nth-child(1) {
+            width: 20rem;
+            margin-right: 16rem;
+        }
+
+        &:nth-child(2) {
+            width: 20rem;
+            margin-right: 3rem;
+        }
+
+        &:nth-child(3) {
+            width: 28.4rem;
+            margin-left: auto;
+        }
     }
 
-    &:nth-child(2) {
-        width: 20rem;
-        margin-right: 3rem;
-    }
 
-    &:nth-child(3) {
-        width: 28.4rem;
-        margin-left: auto;
+    @include breakpoint(mobile) {
+        &:nth-child(3) {
+            grid-column: 1 / -1;
+        }
     }
 }
 
@@ -118,10 +206,20 @@
     line-height: 2.6rem;
     margin-bottom: 5.5rem;
     font-family: var(--orchidea);
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1.8rem;
+    }
 }
 
 .page-footer__nav-list-item {
     margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -132,13 +230,35 @@
     font-size: 1.8rem;
     line-height: 2.2rem;
 
+    @include breakpoint(mobile) {
+        font-size: 1.3rem;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+
     .no-touch &:hover {
         text-decoration: underline;
+    }
+}
+.page-footer__contacts {
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2.4rem;
     }
 }
 
 .page-footer__contacts-item {
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+
+        &:nth-child(3) {
+            grid-column: 1 / -1;
+        }
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -150,11 +270,22 @@
     line-height: 2.2rem;
     color: rgba(white, 0.5);
     margin-bottom: 1.1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        margin-bottom: 0.3rem;
+    }
 }
 
 .page-footer__contacts-info {
     font-size: 1.8rem;
     line-height: 2.3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
 
     a {
         .no-touch &:hover {
@@ -170,6 +301,11 @@
     font-size: 1.8rem;
     line-height: 2.2rem;
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.9rem;
+    }
 }
 
 .page-footer__made-by-logo {
@@ -178,5 +314,11 @@
     flex-shrink: 0;
     margin-left: 1.7rem;
     position: relative;
-    bottom: -.35rem;
+    bottom: -0.35rem;
+
+    @include breakpoint(mobile) {
+        width: 6.7rem;
+        bottom: -0.15rem;
+        margin-left: 1rem;
+    }
 }

@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
     onlyNumeric();
     fileUpload();
     pressCenterSlider();
-    // teamSlider();
-    // newsSlider();
+    teamSlider();
+    newsSlider();
     footerReveal();
     stickyLogo();
     mobileMenu();

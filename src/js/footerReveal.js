@@ -11,30 +11,34 @@ export default function footerReveal() {
 
     if (!pageFooter || !backplate) return;
 
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: pageFooter,
-            start: 'top bottom',
-            end: 'bottom bottom',
-            scrub: true
+    ScrollTrigger.matchMedia({
+        '(min-width: 641px)': () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: pageFooter,
+                    start: 'top bottom',
+                    end: 'bottom bottom',
+                    scrub: true
+                }
+            });
+
+            tl.to(backplate, {
+                autoAlpha: 1
+            })
+                .to(
+                    whiteLogo,
+                    {
+                        autoAlpha: 1
+                    },
+                    0
+                )
+                .to(
+                    normalLogo,
+                    {
+                        autoAlpha: 0
+                    },
+                    0
+                );
         }
     });
-
-    tl.to(backplate, {
-        autoAlpha: 1
-    })
-        .to(
-            whiteLogo,
-            {
-                autoAlpha: 1
-            },
-            0
-        )
-        .to(
-            normalLogo,
-            {
-                autoAlpha: 0
-            },
-            0
-        );
 }

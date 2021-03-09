@@ -1,9 +1,20 @@
+
+.team {
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
+}
+
 .team__content {
     display: flex;
     flex-direction: column;
     padding-left: var(--sidebar-width);
     padding-top: 7.5rem;
     padding-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
 }
 
 .team__top-row {
@@ -11,33 +22,19 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5rem;
-}
 
-.team__heading {
-    font-weight: 500;
-    font-size: 4.7rem;
-    line-height: 1.2;
-    font-family: var(--orchidea);
-    margin-right: 3rem;
-}
-
-.team__heading-link {
-    display: flex;
-    align-items: center;
-
-    svg {
-        width: 1rem;
-        height: 1.4rem;
-        flex-shrink: 0;
-        margin-left: 4rem;
-        fill: #677571;
-        margin-top: 1rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
     }
 }
 
 .team__slider-controls {
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .team__slider-controls-btn {
@@ -68,6 +65,7 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: nowrap;
+    touch-action: pan-x;
 }
 
 .team__card {
@@ -79,7 +77,12 @@
     user-select: none;
     -webkit-user-drag: none;
     -webkit-app-region: no-drag;
-    touch-action: pan-x pinch-zoom;
+    
+
+    @include breakpoint(mobile) {
+        width: 13rem;
+        margin-right: 2rem;
+    }
 
     .no-touch &:hover {
         .team__card-image-container {
@@ -100,6 +103,13 @@
     margin-bottom: 2rem;
     height: 38.2rem;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8rem), calc(100% - 2.8rem) 100%, 0 100%);
+
+    @include breakpoint(mobile) {
+        
+        height: 17.6rem;
+        margin-bottom: 1.5rem;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1.3rem), calc(100% - 1.3rem) 100%, 0 100%);
+    }
 }
 
 .team__card-image {
@@ -112,8 +122,12 @@
     transform: translateX(-50%);
     max-width: 100%;
     filter: grayscale(100%);
-    transition: filter .2s;
+    transition: filter 0.2s;
     @include objectFitContainBottom();
+
+    @include breakpoint(mobile) {
+        height: 14.3rem;
+    }
 }
 
 .team__card-name {
@@ -122,10 +136,20 @@
     line-height: 1.2;
     font-family: var(--orchidea);
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
 }
 
 .team__card-role {
     font-weight: 300;
     font-size: 1.8rem;
     line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
 }

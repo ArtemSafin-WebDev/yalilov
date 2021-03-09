@@ -1,9 +1,20 @@
+.news {
+    @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+    }
+}
+
+
 .news__content {
     display: flex;
     flex-direction: column;
     padding-left: var(--sidebar-width);
     padding-top: 7.5rem;
     padding-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
 }
 
 .news__top-row {
@@ -11,11 +22,19 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .news__slider-controls {
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .news__slider-controls-btn {
@@ -46,6 +65,7 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: nowrap;
+    touch-action: pan-x;
 }
 
 .news__card {
@@ -56,13 +76,17 @@
     user-select: none;
     -webkit-user-drag: none;
     -webkit-app-region: no-drag;
-    touch-action: pan-x pinch-zoom;
+
+    @include breakpoint(mobile) {
+        width: 16.6rem;
+        margin-right: 2.4rem;
+    }
 
     .no-touch &:hover {
         .news__card-image {
             filter: grayscale(0);
             transform: scale(1.04);
-            transition: filter .2s, transform .3s ease-out;
+            transition: filter 0.2s, transform 0.3s ease-out;
         }
     }
 }
@@ -82,6 +106,13 @@
     user-select: none;
     text-align: right;
     margin-top: -0.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 0.8rem;
+        line-height: 1.2;
+        margin-right: 0.7rem;
+        margin-top: -0.2rem;
+    }
 }
 
 .news__card-content {
@@ -95,6 +126,11 @@
     backface-visibility: hidden;
     height: 26.6rem;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        height: 9.6rem;
+        margin-bottom: 1.2rem;
+    }
 }
 
 .news__card-image {
@@ -105,7 +141,7 @@
     height: 100%;
     @include objectFitCover();
     filter: grayscale(100%);
-    transition: filter .2s, transform .3s;
+    transition: filter 0.2s, transform 0.3s;
 }
 
 .news__card-title {
@@ -113,14 +149,25 @@
     font-size: 1.8rem;
     line-height: 2.2rem;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-bottom: 0.2rem;
+    }
 }
 
 .news__card-date {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.2;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
     color: #75837f;
     font-family: var(--orchidea);
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
 }
