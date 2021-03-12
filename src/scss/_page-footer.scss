@@ -1,6 +1,10 @@
 .page-footer {
-    @include breakpoint(mobile) {
+    @include breakpoint(small-tablet) {
         background: rgba(#183029, 0.5);
+
+        &--dark {
+            background: #f9f9f9;
+        }
     }
 }
 
@@ -13,6 +17,14 @@
     padding-bottom: 7.5rem;
     position: relative;
     padding-top: 9rem;
+
+    .page-footer--dark & {
+        color: var(--text-color);
+    }
+
+    @include breakpoint(small-tablet) {
+        min-height: auto;
+    }
 
     @include breakpoint(mobile) {
         padding-top: 3rem;
@@ -47,6 +59,10 @@
     padding-bottom: 6rem;
     border-bottom: 1px solid rgba(white, 0.3);
 
+    .page-footer--dark & {
+        border-color: #b6bdbb;
+    }
+
     @include breakpoint(mobile) {
         display: grid;
         justify-content: initial;
@@ -79,10 +95,6 @@
     color: rgba(white, 0.3);
     margin-right: 3rem;
     flex-shrink: 0;
-
-    @include breakpoint(mobile) {
-        margin-right: 2.5rem;
-    }
     &:last-child {
         margin-right: 0;
     }
@@ -99,6 +111,27 @@
     &.active {
         font-weight: 400;
         color: white;
+    }
+
+    .page-footer--dark & {
+        color: rgba(#183029, 0.5);
+
+        &:link,
+        &:visited {
+            color: rgba(#183029, 0.5);
+        }
+
+        .no-touch &:hover {
+            color: #183029;
+        }
+
+        &.active {
+            color: #183029;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: 2.5rem;
     }
 }
 
@@ -138,6 +171,14 @@
         color: white;
     }
 
+    .page-footer--dark & {
+        color: var(--text-color);
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+    }
+
     .no-touch &:hover {
         transform: scale(1.1);
     }
@@ -151,6 +192,10 @@
             width: 2rem;
             height: 2rem;
             fill: #c7cccb;
+
+            .page-footer--dark & {
+                fill: var(--text-color);
+            }
         }
     }
 }
@@ -191,7 +236,6 @@
             margin-left: auto;
         }
     }
-
 
     @include breakpoint(mobile) {
         &:nth-child(3) {
@@ -270,6 +314,10 @@
     line-height: 2.2rem;
     color: rgba(white, 0.5);
     margin-bottom: 1.1rem;
+
+    .page-footer--dark & {
+        color: rgba(#183029, 0.5);
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;

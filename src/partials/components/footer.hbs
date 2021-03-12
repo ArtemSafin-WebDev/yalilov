@@ -1,10 +1,18 @@
-<footer class="page-footer">
+<footer class="page-footer {{#if darkfooter}} page-footer--dark {{/if}}">
     <div class="container">
         <div class="page-footer__content">
 
             <div class="page-footer__top-row">
                 <a href="#" class="page-footer__logo">
+
+
+
+                    {{#if darkfooter}}
+                    <img src="img/logo.svg" alt="" class="page-footer__logo-image">
+                    {{else}}
                     <img src="img/white-logo.svg" alt="" class="page-footer__logo-image">
+                    {{/if}}
+
                 </a>
                 <div class="page-footer__languages">
                     <a href="#" class="page-footer__languages-link active">
@@ -143,7 +151,15 @@
             </div>
             <a href="#" class="page-footer__made-by">
                 Создание сайта
+
+
+
+                {{#if darkfooter}}
+                <img src="img/mw-logo-dark.svg" alt="" class="page-footer__made-by-logo" width="80">
+                {{else}}
                 <img src="img/mw-logo.svg" alt="" class="page-footer__made-by-logo" width="80">
+                {{/if}}
+
             </a>
         </div>
     </div>

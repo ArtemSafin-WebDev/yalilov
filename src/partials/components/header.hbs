@@ -84,6 +84,9 @@
                     </div>
                 </div>
             </div>
+
+
+            {{#if headerLanguage}}
             <div class="page-header__languages">
                 <a href="#" class="page-header__languages-link active">
                     RU
@@ -95,6 +98,14 @@
                     TAT
                 </a>
             </div>
+            {{else}}
+            <div class="page-header__logo-block js-sticky-logo">
+                <a href="#" class="page-header__logo">
+                    <img src="img/logo.svg" alt="" class="page-header__logo-image">
+                    <img src="img/white-logo.svg" alt="" class="page-header__logo-image-white">
+                </a>
+            </div>
+            {{/if}}
             <a href="#" class="page-header__mobile-logo">
                 <img src="img/logo.svg" alt="" class="page-header__mobile-logo-image" width="100">
                 <img src="img/white-logo.svg" alt="" class="page-header__mobile-logo-image-white">

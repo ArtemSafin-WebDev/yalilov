@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { debounce } from 'lodash';
 
 class CardSlider {
-    constructor(element) {
+    constructor(element, options) {
         this.rootElement = element;
         this.loop = true;
         this.cardsWrapper = element.querySelector('.js-slider-cards');
@@ -33,9 +33,13 @@ class CardSlider {
         this.clonedSlides = [];
         this.filterClicks = false;
         this.filterClicksDelay = 200;
-        this.scaleMultiplier = 1;
+        this.scaleMultiplier = options?.scaleMultiplier || 1;
+        this.onSlideChange = options?.onSlideChange;
+       
         this.movingByClick = false;
         this.slideToClickedSlides = true;
+        this.TRANSITION_DURATION = 0.65;
+        
         if (this.cards.length < 1) {
             console.warn('No cards present');
             return;
@@ -49,7 +53,7 @@ class CardSlider {
         this.thresholdReached = false;
         this.cloneIndex = this.originalCards.length;
         this.doneCloning = false;
-        this.debug = true;
+        this.debug = false;
 
         this.initializeSlider();
 
@@ -281,7 +285,7 @@ class CardSlider {
 
         const prevIndex = this.activeIndex;
 
-        const DURATION = force ? 0 : 0.4;
+        const DURATION = force ? 0 : this.TRANSITION_DURATION;
         gsap.delayedCall(DURATION, () => {
             this.locked = false;
 
@@ -408,12 +412,18 @@ class CardSlider {
             });
         }
 
+      
+
         this.activeIndex = index;
 
         this.cards.forEach(card => card.classList.remove('active'));
         this.cards[this.activeIndex].classList.add('active');
 
         this.handleArrowsActivity();
+
+        if (typeof this.onSlideChange === 'function' && !force) {
+            this.onSlideChange(prevIndex, this.activeIndex);
+        }
     };
 
     slideNext = () => {

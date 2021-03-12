@@ -13,6 +13,13 @@ import newsSlider from './newsSlider';
 import footerReveal from './footerReveal';
 import stickyLogo from './stickyLogo';
 import mobileMenu from './mobileMenu';
+import clientsSlider from './clientsSlider';
+import aboutAnimations from './aboutAnimations';
+import imagesLoaded from 'imagesloaded';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,6 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
     footerReveal();
     stickyLogo();
     mobileMenu();
+    clientsSlider();
+    aboutAnimations();
+
+    const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
+
+    imgLoaded.on('always', () => {
+        ScrollTrigger.refresh();
+
+        console.log('Images has been loaded')
+    });
+
+    document.addEventListener('lazyloaded', function(){
+        ScrollTrigger.refresh();
+    });
 });
 
 window.addEventListener('load', function() {

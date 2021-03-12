@@ -12,33 +12,39 @@ export default function footerReveal() {
     if (!pageFooter || !backplate) return;
 
     ScrollTrigger.matchMedia({
-        '(min-width: 641px)': () => {
+        '(min-width: 769px)': () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: pageFooter,
-                    start: 'top bottom',
+                    start: 'top bottom-=20%',
                     end: 'bottom bottom',
-                    scrub: true
+                    scrub: false,
+                    toggleActions: 'play pause play reverse'
                 }
             });
 
             tl.to(backplate, {
-                autoAlpha: 1
-            })
-                .to(
+                autoAlpha: 1,
+                duration: 0.3
+            });
+
+            if (whiteLogo && normalLogo) {
+                tl.to(
                     whiteLogo,
                     {
-                        autoAlpha: 1
+                        autoAlpha: 1,
+                        duration: 0.3
                     },
                     0
-                )
-                .to(
+                ).to(
                     normalLogo,
                     {
-                        autoAlpha: 0
+                        autoAlpha: 0,
+                        duration: 0.3
                     },
                     0
                 );
+            }
         }
     });
 }

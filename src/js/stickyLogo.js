@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function stickyLogo() {
     const stickyLogo = document.querySelector('.js-sticky-logo');
-    const pageFooterContent = document.querySelector('.page-footer__content');
+    const pageHeader = document.querySelector('.page-header');
 
     if (!stickyLogo) return;
 
@@ -14,7 +14,7 @@ export default function stickyLogo() {
         '(min-width: 641px)': () => {
             ScrollTrigger.create({
                 trigger: stickyLogo,
-                start: () => `top top+=${parseInt(window.getComputedStyle(pageFooterContent).paddingTop, 10)}px`,
+                start: () => `top top+=${parseInt(window.getComputedStyle(pageHeader).top, 10)}px`,
                 endTrigger: 'html',
                 end: 'bottom bottom',
                 pin: true
