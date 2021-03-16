@@ -45,6 +45,40 @@ export default function footerReveal() {
                     0
                 );
             }
+        },
+        '(max-width: 640px)': () => {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: pageFooter,
+                    start: 'top bottom-=20%',
+                    end: 'bottom bottom',
+                    scrub: false,
+                    toggleActions: 'play pause play reverse'
+                }
+            });
+
+            tl.to(backplate, {
+                autoAlpha: 1,
+                duration: 0.3
+            });
+
+            if (whiteLogo && normalLogo) {
+                tl.to(
+                    whiteLogo,
+                    {
+                        autoAlpha: 1,
+                        duration: 0.3
+                    },
+                    0
+                ).to(
+                    normalLogo,
+                    {
+                        autoAlpha: 0,
+                        duration: 0.3
+                    },
+                    0
+                );
+            }
         }
     });
 }
