@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     footerReveal();
     stickyLogo();
     mobileMenu();
-    clientsSlider();
+  
     aboutAnimations();
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
@@ -54,5 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+
+    clientsSlider();
     setTimeout(() => document.body.classList.add('animatable'), 300)
 })

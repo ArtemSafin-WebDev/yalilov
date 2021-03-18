@@ -1,5 +1,5 @@
 import CardSlider from './mwSlider';
-import Hammer from 'hammerjs';
+
 import { Swiper, Navigation, EffectFade } from 'swiper';
 
 Swiper.use([Navigation, EffectFade]);
@@ -9,47 +9,38 @@ export default function clientsSlider() {
 
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
-        const quotes = element.querySelector('.about__clients-slider-quotes')
         const quotesSlider = new Swiper(container, {
             effect: 'fade',
             loop: true,
             watchOverflow: true,
             touchStartPreventDefault: false,
-            allowTouchMove: false,
+            allowTouchMove: window.matchMedia(`(max-width: 640px)`).matches ? true : false,
             fadeEffect: {
                 crossFade: true
             },
             autoHeight: window.matchMedia(`(max-width: 640px)`).matches ? true : false,
-
+            navigation: {
+                nextEl: window.matchMedia(`(max-width: 640px)`).matches ? element.querySelector('.js-slider-arrow-next') : null,
+                prevEl: window.matchMedia(`(max-width: 640px)`).matches ? element.querySelector('.js-slider-arrow-prev') : null
+            },
             speed: 500
         });
 
-        const cardSlider = new CardSlider(element, {
-            scaleMultiplier: 1.2,
-            onSlideChange: (prevIndex, nextIndex) => {
-                if (nextIndex > prevIndex) {
-                    quotesSlider.slideNext();
+        if (!window.matchMedia('(max-width: 640px)').matches) {
+            new CardSlider(element, {
+                scaleMultiplier: 1.2,
+                onSlideChange: (prevIndex, nextIndex) => {
+                    if (nextIndex > prevIndex) {
+                        quotesSlider.slideNext();
+                    }
+                    if (nextIndex < prevIndex) {
+                        quotesSlider.slidePrev();
+                    }
+                    console.log({
+                        prevIndex,
+                        nextIndex
+                    });
                 }
-                if (nextIndex < prevIndex) {
-                    quotesSlider.slidePrev();
-                }
-                console.log({
-                    prevIndex,
-                    nextIndex
-                });
-            }
-        });
-
-        if (window.matchMedia('(max-width: 640px)').matches) {
-            
-
-            const hammertime = new Hammer(quotes);
-
-            hammertime.on('swipeleft', () => {
-                cardSlider.slideNext();
-            });
-            hammertime.on('swiperight', () => {
-                cardSlider.slidePrev();
             });
         }
     });

@@ -54,6 +54,11 @@
         font-size: 1.2rem;
         line-height: 1.9rem;
         margin-bottom: 1rem;
+        font-weight: 400;
+
+        .page-footer--dark & {
+            color: var(--text-color);
+        }
     }
 }
 
@@ -199,7 +204,7 @@
             fill: #c7cccb;
 
             .page-footer--dark & {
-                fill: var(--text-color);
+                fill: #A1AAA8;
             }
         }
     }
@@ -260,6 +265,7 @@
         font-size: 1.8rem;
         line-height: 1.2;
         margin-bottom: 1.8rem;
+        font-weight: 400;
     }
 }
 
@@ -364,6 +370,7 @@
 
     .page-footer--dark & {
         color: rgba(#183029, 0.5);
+        font-weight: 400;
     }
 
     @include breakpoint(mobile) {
@@ -400,6 +407,10 @@
     @include breakpoint(mobile) {
         font-size: 1.2rem;
         line-height: 1.9rem;
+        font-weight: 400;
+        .page-footer--dark & {
+            color: var(--text-color);
+        }
     }
 }
 

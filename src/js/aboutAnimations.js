@@ -15,6 +15,7 @@ export default function aboutAnimations() {
     const functions = document.querySelector('.about__functions');
     const functionsSideImage = document.querySelector('.about__functions-side-image-container');
     const functionsImage = document.querySelector('.about__functions-image-container');
+    const blocksToReveal = [aboutClientsTopRow, clientsSliderBlock, principles, functions];
 
     if (experienceInfo) {
         ScrollTrigger.matchMedia({
@@ -32,74 +33,30 @@ export default function aboutAnimations() {
         });
     }
 
-    if (aboutClientsTopRow) {
-        ScrollTrigger.matchMedia({
-            '(min-width: 641px)': () => {
-                const timeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: aboutClientsTopRow,
-                        start: 'top center',
-                        end: 'bottom top'
-                    }
-                });
-                timeline.from(aboutClientsTopRow, {
-                    autoAlpha: 0,
-                    duration: 0.7
-                })
-            }
-        });
-    }
-    if (clientsSliderBlock) {
-        ScrollTrigger.matchMedia({
-            '(min-width: 641px)': () => {
-                const timeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: clientsSliderBlock,
-                        start: 'top center',
-                        end: 'bottom top'
-                    }
-                });
-                timeline.from(clientsSliderBlock, {
-                    autoAlpha: 0,
-                    duration: 0.7
-                })
-            }
-        });
-    }
-    if (principles) {
-        ScrollTrigger.matchMedia({
-            '(min-width: 641px)': () => {
-                const timeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: principles,
-                        start: 'top center',
-                        end: 'bottom top'
-                    }
-                });
-                timeline.from(principles, {
-                    autoAlpha: 0,
-                    duration: 0.7
-                })
-            }
-        });
-    }
-    if (functions) {
-        ScrollTrigger.matchMedia({
-            '(min-width: 641px)': () => {
-                const timeline = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: functions,
-                        start: 'top center',
-                        end: 'bottom top'
-                    }
-                });
-                timeline.from(functions, {
-                    autoAlpha: 0,
-                    duration: 0.7
-                })
-            }
-        });
 
+    blocksToReveal.forEach(block => {
+        if (block) {
+            ScrollTrigger.matchMedia({
+                '(min-width: 641px)': () => {
+                    const timeline = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: block,
+                            start: 'top bottom-=40%',
+                            end: 'bottom top'
+                        }
+                    });
+                    timeline.from(block, {
+                        autoAlpha: 0,
+                        duration: 0.7
+                    })
+                }
+            });
+        }
+    })
+
+   
+    if (functions) {
+    
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: functions,
@@ -112,7 +69,7 @@ export default function aboutAnimations() {
         tl.from(functionsSideImage, {
             yPercent: 200
         }).from(functionsImage, {
-            yPercent: 30
+            yPercent: 8
         }, 0)
 
     }

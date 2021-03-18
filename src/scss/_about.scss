@@ -1,10 +1,9 @@
 .about {
     padding-bottom: 15rem;
     @include breakpoint(mobile) {
-        padding-bottom: 5rem;
+        padding-bottom: 7rem;
     }
 }
-
 
 .about__content {
     padding-top: 19rem;
@@ -25,7 +24,8 @@
     margin-bottom: 13rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 5rem;
+        margin-bottom: 7rem;
+        padding-left: 3rem;
     }
 }
 
@@ -62,8 +62,8 @@
     font-family: var(--orchidea);
 
     @include breakpoint(mobile) {
-        font-size: 2.8rem;
-        line-height: 1.3;
+        font-size: 2.2rem;
+        line-height: 3.3rem;
     }
 }
 
@@ -79,8 +79,9 @@
 
     @include breakpoint(mobile) {
         padding-top: 0;
-        font-size: 2rem;
-        margin-bottom: 3rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
     }
     &::after {
         content: '';
@@ -92,8 +93,8 @@
         margin-bottom: 1.2rem;
 
         @include breakpoint(mobile) {
-            margin: 0 1.6rem;
-            margin-bottom: 1rem;
+            margin: 0 0.5rem;
+            margin-bottom: 0.9rem;
         }
     }
 }
@@ -102,7 +103,7 @@
     margin-bottom: 15rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 4rem;
+        margin-bottom: 7rem;
     }
 }
 
@@ -111,7 +112,7 @@
 
     @include breakpoint(mobile) {
         padding-right: 0;
-        margin-bottom: 3rem;
+        margin-bottom: 2.4rem;
     }
 }
 
@@ -123,8 +124,8 @@
 
     @include breakpoint(mobile) {
         font-size: 2.2rem;
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
+        line-height: 3.3rem;
+        margin-bottom: 0.7rem;
     }
 }
 
@@ -134,8 +135,8 @@
     line-height: 3.2rem;
 
     @include breakpoint(mobile) {
-        font-size: 1.8rem;
-        line-height: 1.3;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
     }
 }
 
@@ -188,8 +189,8 @@
 
     @include breakpoint(mobile) {
         font-size: 2.2rem;
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
+        line-height: 3.3rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -203,8 +204,8 @@
     padding-top: 1.7rem;
 
     @include breakpoint(mobile) {
-        font-size: 1.8rem;
-        line-height: 1.3;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
         padding: 0;
         margin: 0;
         width: 100%;
@@ -216,7 +217,10 @@
     align-items: center;
     padding-top: 1.6rem;
     @include breakpoint(mobile) {
-        display: none;
+        order: -1;
+        padding: 0;
+        padding-left: 3rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -230,7 +234,8 @@
     color: #2d423c;
     transition: color 0.2s;
 
-    &.disabled {
+    &.disabled,
+    &.swiper-button-disabled {
         color: #a0a6a2;
         cursor: default;
     }
@@ -242,24 +247,40 @@
     background-color: #a0a6a2;
     margin: 0 2.4rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 11rem;
+    }
 }
 
 .about__clients {
     margin-bottom: 15rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
+    }
+}
+
+.about__clients-slider-block {
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        .about__row,
+        .about__left-col,
+        .about__right-col {
+            display: contents;
+        }
     }
 }
 
 .about__clients-slider {
-
     .swiper-container {
         overflow: visible;
     }
     @include breakpoint(mobile) {
         display: flex;
         flex-direction: column;
+        padding-left: 3rem;
     }
 }
 
@@ -275,7 +296,8 @@
     font-family: var(--orchidea);
 
     @include breakpoint(mobile) {
-        font-size: 1rem;
+        font-size: 1.3rem;
+        line-height: 1.2;
     }
     &:link,
     &:visited {
@@ -291,7 +313,9 @@
         bottom: 0.4rem;
 
         @include breakpoint(mobile) {
-            margin-left: 0.5rem;
+            margin-left: 0.7rem;
+            width: 0.5rem;
+            height: 0.5rem;
         }
     }
 
@@ -328,7 +352,7 @@
 .about__clients-slider-quotes {
     margin-bottom: 5rem;
     width: 63.2rem;
-  
+
     @include breakpoint(mobile) {
         margin: 0;
         width: 100%;
@@ -358,30 +382,29 @@
         pointer-events: none;
         bottom: -3rem;
         right: -3rem;
-       
+
         position: absolute;
 
         @include breakpoint(mobile) {
             right: 0;
             bottom: 0;
-            width: 12rem;
-            height: 8rem;
+            width: 8.8rem;
+            height: 7.8rem;
         }
     }
-  
 
     @include breakpoint(mobile) {
         font-size: 2rem;
-        line-height: 1.3;
-        font-weight: 400;
+        line-height: 2.9rem;
+        font-weight: 300;
         margin-bottom: 1rem;
     }
 }
 
 .about__clients-slider-author {
-    margin-top: 4rem;
+    padding-top: 4rem;
     @include breakpoint(mobile) {
-        margin-top: 2rem;
+        padding-top: 3.5rem;
     }
 }
 
@@ -392,9 +415,9 @@
     margin-bottom: 0.2rem;
 
     @include breakpoint(mobile) {
-        font-size: 1.8rem;
-        line-height: 1.2;
-        margin-bottom: 0.5rem;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        margin-bottom: 0.2rem;
     }
 }
 
@@ -403,8 +426,8 @@
     font-size: 1.8rem;
     line-height: 2.7rem;
     @include breakpoint(mobile) {
-        font-size: 1.6rem;
-        line-height: 1.2;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
     }
 }
 
@@ -415,8 +438,10 @@
     touch-action: pan-x;
 
     @include breakpoint(mobile) {
-       order: -1;
-       margin-bottom: 3rem;
+        order: -1;
+        margin-bottom: 3rem;
+
+        display: none;
     }
 }
 
@@ -479,7 +504,7 @@
     }
 
     @include breakpoint(mobile) {
-        margin-bottom: 4rem;
+        margin-bottom: 7rem;
     }
 }
 
@@ -490,9 +515,9 @@
     font-weight: 400;
 
     @include breakpoint(mobile) {
-        font-size: 2.8rem;
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
+        font-size: 2.2rem;
+        line-height: 3.3rem;
+        margin-bottom: .6rem;
     }
 }
 
@@ -500,17 +525,18 @@
     font-weight: 300;
     font-size: 2rem;
     line-height: 2.9rem;
-    margin-bottom: 3.5rem;
-    padding-top: 2.7rem;
+    margin-bottom: 6rem;
+    padding-top: 1rem;
     max-width: 63.2rem;
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
+        line-height: 2.2rem;
         max-width: none;
         padding: 0;
         margin: 0;
-        line-height: 1.3;
-        margin-bottom: 2rem;
+       
+        margin-bottom: 4rem;
     }
 }
 
@@ -518,6 +544,13 @@
     display: flex;
     flex-wrap: wrap;
     margin: -1rem -3.2rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-wrap: nowrap;
+        padding-left: 3rem;
+        flex-direction: column;
+    }
 }
 
 .about__principles-item {
@@ -528,6 +561,11 @@
 
     @include breakpoint(mobile) {
         width: 100%;
+        padding: 0;
+        margin-bottom: 3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -538,8 +576,8 @@
     line-height: 4.7rem;
 
     @include breakpoint(mobile) {
-        font-size: 1.8rem;
-        line-height: 1.3;
+        font-size: 2rem;
+        line-height: 2.9rem;
     }
 
     &::before {
@@ -554,9 +592,8 @@
         margin-top: 1rem;
 
         @include breakpoint(mobile) {
-            margin-top: 0.5rem;
-            border-width: 0 0 1rem 1rem;
-            margin-top: .55rem;
+            
+            margin-top: 0.8rem;
         }
     }
 }
@@ -569,8 +606,13 @@
     }
 
     @include breakpoint(mobile) {
-        .about__left-col {
+        display: flex;
+        flex-direction: column;
+        .about__left-col,
+        .about__right-col,
+        .about__row {
             display: block;
+            display: contents;
         }
     }
 }
@@ -596,11 +638,10 @@
     margin-bottom: 8rem;
     max-width: 80rem;
 
-    
     @include breakpoint(mobile) {
         font-size: 2.2rem;
-        line-height: 1.3;
-        margin-bottom: 2.5rem;
+        line-height: 3.3rem;
+        margin-bottom: 3rem;
         max-width: none;
     }
 }
@@ -610,6 +651,7 @@
 
     @include breakpoint(mobile) {
         flex-direction: column;
+        display: contents;
     }
 }
 
@@ -622,7 +664,8 @@
         width: 100%;
         flex-shrink: 1;
         margin: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.8rem;
+        order: 2;
     }
 }
 
@@ -631,7 +674,8 @@
 
     @include breakpoint(mobile) {
         padding: 0;
-        margin-bottom: 1.6rem;
+        margin-bottom: 0;
+        order: 3;
     }
 }
 
@@ -648,14 +692,15 @@
 
     @include breakpoint(mobile) {
         font-size: 1.6rem;
-        line-height: 1.3;
+        line-height: 2.2rem;
+        margin-bottom: 2.4rem;
     }
 
     p {
         margin-bottom: 5rem;
 
         @include breakpoint(mobile) {
-            margin-bottom: 2rem;
+            margin-bottom: 1.2rem;
         }
         &:last-child {
             margin-bottom: 0;
