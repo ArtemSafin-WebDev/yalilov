@@ -1,9 +1,18 @@
 .employee-publications {
     margin: 15rem 0;
+
+    @include breakpoint(mobile) {
+        margin: 5rem 0;
+        margin-bottom: 7rem;
+    }
 }
 
 .employee-publications__content {
     padding-left: var(--sidebar-width);
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
 }
 
 .employee-publications__row {
@@ -13,6 +22,10 @@
 .employee-publications__left-col {
     width: 35rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 3rem;
+    }
 
     &::after {
         content: '';
@@ -25,6 +38,11 @@
         border-color: transparent transparent #c6cbca;
         margin-top: 2rem;
         flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            border-width: 0 0 1rem 1rem;
+            margin-top: 1rem;
+        }
     }
 }
 
@@ -40,6 +58,11 @@
     margin-bottom: 5rem;
     padding-bottom: 4rem;
     border-bottom: 1px solid #c6cbca;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        padding-bottom: 1.4rem;
+    }
 }
 
 .employee-publications__heading {
@@ -48,6 +71,11 @@
     font-weight: 400;
     font-family: var(--orchidea);
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 2.9rem;
+    }
 }
 
 .employee-publications__slider-controls {
@@ -56,6 +84,10 @@
     width: 21rem;
     flex-shrink: 0;
     margin-left: 2rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .employee-publications__slider-controls-btn {
@@ -103,6 +135,11 @@
     -webkit-app-region: no-drag;
     width: 50rem;
     margin-right: 6.4rem;
+
+    @include breakpoint(mobile) {
+        width: 26.4rem;
+        margin-right: 1.6rem;
+    }
 }
 
 .employee-publications__card-category {
@@ -121,6 +158,13 @@
     text-transform: uppercase;
     color: #75837f;
     margin-right: 2.5rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 0.8rem;
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+        margin-top: -0.2rem;
+    }
 }
 
 .employee-publications__card-content {
@@ -129,7 +173,11 @@
     background-color: #f0f0f0;
     padding: 4rem;
     min-height: 25.6rem;
-   
+
+    @include breakpoint(mobile) {
+        padding: 1.5rem 1.8rem;
+        min-height: 17.4rem;
+    }
 }
 
 .employee-publications__card-title {
@@ -137,6 +185,12 @@
     line-height: 3rem;
     margin-bottom: 2.5rem;
     font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .employee-publications__card-date {
@@ -147,8 +201,17 @@
     text-transform: uppercase;
     color: #75837f;
     font-family: var(--orchidea);
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
 }
 
 .employee-publications__slider {
     margin-left: -4rem;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
 }

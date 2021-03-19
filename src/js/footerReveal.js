@@ -29,17 +29,18 @@ export default function footerReveal() {
             });
 
             if (whiteLogo && normalLogo) {
+                console.log(whiteLogo, normalLogo)
                 tl.to(
                     whiteLogo,
                     {
-                        autoAlpha: 0,
+                        autoAlpha: 1,
                         duration: 0.3
                     },
                     0
                 ).to(
                     normalLogo,
                     {
-                        autoAlpha: 1,
+                        autoAlpha: 0,
                         duration: 0.3
                     },
                     0

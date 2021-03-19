@@ -14,7 +14,7 @@ export default function expertForm() {
 
     ScrollTrigger.matchMedia({
         
-        'all': () => {
+        '(min-width: 641px)': () => {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: expertForm,

@@ -1,18 +1,32 @@
 .employee-experience {
     margin: 15rem 0;
+
+    @include breakpoint(mobile) {
+        margin: 5rem 0;
+        margin-bottom: 7rem;
+    }
 }
 
 .employee-experience__content {
     padding-left: var(--sidebar-width);
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
 }
 
 .employee-experience__intro-text {
-    margin-bottom: 5rem;
     font-size: 3.2rem;
     line-height: 4.5rem;
     font-family: var(--orchidea);
     margin-bottom: 5rem;
     max-width: 98rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 3.3rem;
+        margin-bottom: 3.6rem;
+    }
 }
 
 .employee-experience__intro-heading {
@@ -25,10 +39,24 @@
     vertical-align: baseline;
     font-family: var(--orchidea);
     font-style: italic;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        margin: 0;
+        flex-shrink: 1;
+        display: flex;
+        margin-bottom: 1.2rem;
+        width: 100%;
+    }
 }
 
 .employee-experience__list-item {
     margin-bottom: 5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.6rem;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -37,6 +65,7 @@
 .employee-experience__card {
     display: flex;
     align-items: flex-start;
+
     &::before {
         content: '';
 
@@ -51,6 +80,13 @@
         width: 35rem;
         flex-shrink: 0;
         margin-top: 1rem;
+
+        @include breakpoint(mobile) {
+            width: 3rem;
+            border-width: .8rem 0 .8rem .8rem;
+            margin: 0;
+            margin-top: 1rem;
+        }
     }
 }
 
@@ -60,4 +96,9 @@
 
     font-size: 2.4rem;
     line-height: 3.5rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 }
