@@ -18,6 +18,8 @@ import aboutAnimations from './aboutAnimations';
 import imagesLoaded from 'imagesloaded';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import publicationsSlider from './publicationsSlider';
+import expertForm from './expertForm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,18 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
     footerReveal();
     stickyLogo();
     mobileMenu();
-  
+    publicationsSlider();
+
     aboutAnimations();
+    expertForm();
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
 
     imgLoaded.on('always', () => {
         ScrollTrigger.refresh();
 
-        console.log('Images has been loaded')
+        console.log('Images has been loaded');
     });
 
-    document.addEventListener('lazyloaded', function(){
+    document.addEventListener('lazyloaded', function() {
         ScrollTrigger.refresh();
     });
 });
@@ -56,5 +60,5 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
 
     clientsSlider();
-    setTimeout(() => document.body.classList.add('animatable'), 300)
-})
+    setTimeout(() => document.body.classList.add('animatable'), 300);
+});

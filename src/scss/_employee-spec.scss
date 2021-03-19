@@ -1,0 +1,140 @@
+.employee-spec {
+    margin: 14rem 0;
+}
+
+.employee-spec__row {
+    display: flex;
+}
+
+.employee-spec__left-col {
+    width: 35rem;
+    flex-shrink: 0;
+
+    &::after {
+        content: '';
+
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 2.3rem 2.3rem;
+        border-color: transparent transparent #c6cbca;
+        margin-top: 2rem;
+        flex-shrink: 0;
+    }
+}
+
+.employee-spec__right-col {
+    width: 40%;
+    flex-grow: 1;
+}
+
+.employee-spec__content {
+    padding-left: var(--sidebar-width);
+}
+
+.employee-spec__heading {
+    font-size: 4.5rem;
+    line-height: 6.3rem;
+    font-weight: 400;
+    font-family: var(--orchidea);
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #c6cbca;
+    margin-bottom: 5rem;
+}
+
+.employee-spec__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -3.2rem;
+}
+
+.employee-spec__list-item {
+    width: 50%;
+    padding: 3.2rem;
+
+    &::before {
+        display: none;
+    }
+}
+
+.employee-spec__card {
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        content: counter(ordered-list, decimal-leading-zero);
+        font-size: 3.2rem;
+        line-height: 1.2;
+        color: #c6cbca;
+        margin-bottom: 1.2rem;
+        font-family: var(--orchidea);
+    }
+
+    .no-touch &:hover {
+        .employee-spec__card-learn-more-text-inner {
+            transform: translateY(100%);
+        }
+
+        .employee-spec__card-learn-more-text::after {
+            transform: translateY(100%);
+        }
+    }
+}
+
+.employee-spec__card-title {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+}
+
+.employee-spec__card-learn-more {
+    display: inline-flex;
+    align-items: center;
+    color: #183029;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    text-transform: lowercase;
+    font-family: var(--orchidea);
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+    }
+    &:link,
+    &:visited {
+        color: #586964;
+    }
+    svg {
+        flex-shrink: 0;
+        margin-left: 1.1rem;
+        width: 0.3rem;
+        height: 0.5rem;
+        fill: currentColor;
+
+        @include breakpoint(mobile) {
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.employee-spec__card-learn-more-text {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        transition: transform 0.4s;
+    }
+}
+
+.employee-spec__card-learn-more-text-inner {
+    transition: transform 0.3s;
+}

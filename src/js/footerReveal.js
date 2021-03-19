@@ -32,14 +32,14 @@ export default function footerReveal() {
                 tl.to(
                     whiteLogo,
                     {
-                        autoAlpha: 1,
+                        autoAlpha: 0,
                         duration: 0.3
                     },
                     0
                 ).to(
                     normalLogo,
                     {
-                        autoAlpha: 0,
+                        autoAlpha: 1,
                         duration: 0.3
                     },
                     0
