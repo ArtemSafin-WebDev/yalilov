@@ -1,0 +1,310 @@
+.team-page__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 18rem;
+    padding-left: var(--sidebar-width);
+    position: relative;
+    padding-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        min-height: auto;
+        padding-top: 13rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.team-page__row {
+    display: flex;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.team-page__left-col {
+    width: 34.5rem;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+    }
+}
+
+.team-page__right-col {
+    width: 40%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.team-page__heading {
+    font-weight: 300;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    font-family: var(--orchidea);
+    display: flex;
+    align-items: flex-end;
+    padding-top: 1rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+    &::after {
+        content: '';
+        width: 1px;
+        height: 1px;
+        flex-grow: 1;
+        background-color: #c3c9c8;
+        margin: 0 2.5rem;
+        margin-bottom: 1.2rem;
+
+        @include breakpoint(mobile) {
+            margin: 0 0.5rem;
+            margin-bottom: 0.9rem;
+        }
+    }
+}
+
+.team-page__intro-text {
+    font-size: 4.5rem;
+    line-height: 6.3rem;
+    font-family: var(--orchidea);
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 3.3rem;
+    }
+}
+
+.team-page__intro {
+    margin-bottom: 8rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.team-page__about-text {
+    font-weight: 300;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    padding-right: 6rem;
+    margin-top: -0.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-top: 0;
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.team-page__people-cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5rem -2rem;
+
+    @include breakpoint(mobile) {
+        flex-wrap: nowrap;
+        margin: 0;
+        flex-direction: column;
+    }
+}
+
+.team-page__people-cards-list-item {
+    width: 50%;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 3rem;
+        padding-right: 8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.team-page__people-card {
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+    .no-touch &:hover {
+        .team-page__people-card-image-container {
+            background: #f9f9f9;
+        }
+
+        .team-page__people-card-image {
+            filter: grayscale(0%);
+        }
+
+        .team-page__people-card-info-name,
+        .team-page__people-card-info-role {
+            &::after {
+                color: var(--text-color);
+            }
+        }
+    }
+}
+
+.team-page__people-card-image-container {
+    position: relative;
+    background-color: #75837f;
+    transition: background-color 0.2s;
+    overflow: hidden;
+
+    display: block;
+    padding-bottom: 140%;
+
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.6rem), calc(100% - 3.6rem) 100%, 0 100%);
+
+    @include breakpoint(mobile) {
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.2rem), calc(100% - 2.2rem) 100%, 0 100%);
+    }
+}
+
+.team-page__people-card-image {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: auto;
+    width: auto;
+    height: 80%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.2s;
+    @include objectFitContainBottom();
+
+    @include breakpoint(mobile) {
+        height: 75%;
+    }
+}
+
+.team-page__people-card-info {
+    position: absolute;
+    top: 5rem;
+    left: 100%;
+    margin-left: -12rem;
+    width: 23rem;
+
+    @include breakpoint(mobile) {
+        top: 1.8rem;
+        margin-left: -10rem;
+        width: 18rem;
+        
+    }
+}
+
+.team-page__people-card-info-name {
+    font-weight: 300;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    font-family: var(--orchidea);
+    margin-bottom: 0.6rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+    }
+}
+
+.team-page__people-card-info-role {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    letter-spacing: 0.1rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.team-page__people-card-info-name,
+.team-page__people-card-info-role {
+    @supports (clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%)) {
+        &::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+            color: white;
+            clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%);
+            transition: clip-path 0.3s, color 0.2s;
+
+            @include breakpoint(mobile) {
+                clip-path: polygon(0 0, 10rem 0, 10rem 100%, 0 100%);
+            }
+        }
+    }
+}
+
+.team-page__more {
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.team-page__all-people-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #8c9894;
+    position: relative;
+    z-index: 10;
+    font-family: var(--orchidea);
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    &:link,
+    &:visited {
+        color: #8c9894;
+    }
+
+    .no-touch &:hover {
+        color: var(--text-color);
+    }
+    svg {
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: currentColor;
+        flex-shrink: 0;
+        margin-right: 0.8rem;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.7rem;
+        }
+    }
+}

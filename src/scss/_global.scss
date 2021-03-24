@@ -10,7 +10,7 @@
     --max-container-width: 156rem;
     --content-padding: 6rem;
     --text-color: #183029;
-    --sidebar-width: 32rem;
+    --sidebar-width: 23rem;
     --circe: 'Circe', sans-serif;
     --orchidea: 'Orchidea Pro', sans-serif;
 
@@ -61,6 +61,10 @@ html {
 
     @include breakpoint(mobile) {
         font-size: 10px;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 9px;
     }
 }
 
