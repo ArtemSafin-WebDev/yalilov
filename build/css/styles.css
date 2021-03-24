@@ -5326,6 +5326,10 @@ select:-webkit-autofill:focus {
 .expert-form__form {
   max-width: 98rem;
   margin-left: auto; }
+  .expert-form__form .parsley-errors-list.filled {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.2; }
   @media only screen and (max-width: 640px) {
     .expert-form__form {
       margin: 0; } }
@@ -5409,7 +5413,11 @@ select:-webkit-autofill:focus {
   padding: 1.8rem 0;
   font-size: 2.4rem;
   line-height: 1.2;
-  color: white; }
+  color: white;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s; }
+  .expert-form__input.parsley-error {
+    border-color: white; }
   @media only screen and (max-width: 640px) {
     .expert-form__input {
       padding: .9rem 0;
@@ -5485,8 +5493,8 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #183029;
-  color: white;
+  background-color: #fff;
+  color: var(--text-color);
   font-size: 1.8rem;
   line-height: 2.3rem;
   -ms-flex-item-align: start;
@@ -5495,8 +5503,6 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .expert-form__policy-submit {
       padding: 2.4rem 3rem;
-      background: #ffffff;
-      color: #183029;
       width: 28rem;
       margin: 0 auto; } }
   .expert-form__policy-submit:link, .expert-form__policy-submit:visited {

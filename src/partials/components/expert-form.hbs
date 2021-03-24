@@ -1,4 +1,4 @@
-<section class="expert-form">
+<section class="expert-form" id="expert-form">
 
     <div class="expert-form__bg">
         <img src="img/yalilov.svg" alt="" class="expert-form__bg-yalilov">
@@ -15,7 +15,7 @@
                     <h2 class="expert-form__heading">
                         Вы можете задать<br> вопрос эксперту
                     </h2>
-                    <form action="/" method="POST" class="expert-form__form">
+                    <form action="/" method="POST" class="expert-form__form" data-need-validation>
                         <div class="expert-form__form-text">
                             <p>
                                 Если у вас есть вопросы к нашему специалисту, оставьте ваши контакты, и мы свяжемся с
@@ -26,7 +26,7 @@
                             <div class="expert-form__col">
                                 <div class="expert-form__input-wrapper">
 
-                                    <input type="text" class="expert-form__input" placeholder="Ваше имя" id="name">
+                                    <input type="text" class="expert-form__input" placeholder="Ваше имя" id="name" required>
                                     <label for="name" class="expert-form__label">
                                         Ваше имя
                                     </label>
@@ -36,7 +36,7 @@
                                 <div class="expert-form__input-wrapper">
 
                                     <input type="text" class="expert-form__input" placeholder="E-mail или телефон"
-                                        id="contact">
+                                        id="contact" required>
                                     <label for="contact" class="expert-form__label">
                                         E-mail или телефон
                                     </label>
@@ -57,7 +57,7 @@
                         <div class="expert-form__controls">
                             <div class="expert-form__policy">
                                 <label class="expert-form__policy-checkbox">
-                                    <input type="checkbox" class="expert-form__policy-checkbox-input">
+                                    <input type="checkbox" class="expert-form__policy-checkbox-input" required checked>
                                     <span class="expert-form__policy-checkbox-mark">
                                         <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
                                             <use xlink:href="#checkmark"></use>

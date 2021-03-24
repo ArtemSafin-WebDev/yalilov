@@ -256,7 +256,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="employee-intro__write-btn">
+                    <a href="#to-expert-form" class="employee-intro__write-btn">
 
                         <span class="employee-intro__write-btn-text" data-text="Связаться">
                             <span class="employee-intro__write-btn-inner">
@@ -594,100 +594,297 @@
     </div>
 </section>
 
+<section class="expert-form" id="expert-form">
 
+    <div class="expert-form__bg">
+        <img src="img/yalilov.svg" alt="" class="expert-form__bg-yalilov">
 
+        <img src="img/partners.svg" alt="" class="expert-form__bg-partners">
+    </div>
+    <div class="container">
+        <div class="expert-form__content">
+            <div class="expert-form__top-row">
+                <div class="expert-form__left-col">
+
+                </div>
+                <div class="expert-form__right-col">
+                    <h2 class="expert-form__heading">
+                        Вы можете задать<br> вопрос эксперту
+                    </h2>
+                    <form action="/" method="POST" class="expert-form__form" data-need-validation>
+                        <div class="expert-form__form-text">
+                            <p>
+                                Если у вас есть вопросы к нашему специалисту, оставьте ваши контакты, и мы свяжемся с
+                                вами в течении 30 минут
+                            </p>
+                        </div>
+                        <div class="expert-form__row">
+                            <div class="expert-form__col">
+                                <div class="expert-form__input-wrapper">
+
+                                    <input type="text" class="expert-form__input" placeholder="Ваше имя" id="name" required>
+                                    <label for="name" class="expert-form__label">
+                                        Ваше имя
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="expert-form__col">
+                                <div class="expert-form__input-wrapper">
+
+                                    <input type="text" class="expert-form__input" placeholder="E-mail или телефон"
+                                        id="contact" required>
+                                    <label for="contact" class="expert-form__label">
+                                        E-mail или телефон
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="expert-form__col expert-form__col--fullwidth">
+                                <div class="expert-form__input-wrapper">
+
+                                    <input type="text" class="expert-form__input" placeholder="Ваш вопрос"
+                                        id="question">
+                                    <label for="question" class="expert-form__label">
+                                        Ваш вопрос
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="expert-form__controls">
+                            <div class="expert-form__policy">
+                                <label class="expert-form__policy-checkbox">
+                                    <input type="checkbox" class="expert-form__policy-checkbox-input" required checked>
+                                    <span class="expert-form__policy-checkbox-mark">
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
+                                            <use xlink:href="#checkmark"></use>
+                                        </svg>
+                                    </span>
+                                    <span class="expert-form__policy-checkbox-text">
+                                        Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">
+                                            Политикой конфиденциальности
+                                        </a>
+                                    </span>
+
+                                </label>
+                            </div>
+
+                            <button class="expert-form__policy-submit" type="submit">
+                                <span class="expert-form__policy-submit-text" data-text="Отправить">
+                                    <span class="expert-form__policy-submit-inner">
+                                        Отправить
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
 
         </main>
 
-        <section class="expert-form">
-        
-            <div class="expert-form__bg">
-                <img src="img/yalilov.svg" alt="" class="expert-form__bg-yalilov">
-        
-                <img src="img/partners.svg" alt="" class="expert-form__bg-partners">
-            </div>
+       
+        <footer class="page-footer  page-footer--dark ">
             <div class="container">
-                <div class="expert-form__content">
-                    <div class="expert-form__top-row">
-                        <div class="expert-form__left-col">
+                <div class="page-footer__content">
         
+                    <div class="page-footer__top-row">
+                        <a href="#" class="page-footer__logo">
+        
+        
+        
+                            <img src="img/logo.svg" alt="" class="page-footer__logo-image">
+        
+                        </a>
+                        <div class="page-footer__languages">
+                            <a href="#" class="page-footer__languages-link active">
+                                RU
+                            </a>
+                            <a href="#" class="page-footer__languages-link">
+                                ENG
+                            </a>
+                            <a href="#" class="page-footer__languages-link">
+                                TAT
+                            </a>
                         </div>
-                        <div class="expert-form__right-col">
-                            <h2 class="expert-form__heading">
-                                Вы можете задать<br> вопрос эксперту
-                            </h2>
-                            <form action="/" method="POST" class="expert-form__form">
-                                <div class="expert-form__form-text">
-                                    <p>
-                                        Если у вас есть вопросы к нашему специалисту, оставьте ваши контакты, и мы свяжемся с
-                                        вами в течении 30 минут
-                                    </p>
-                                </div>
-                                <div class="expert-form__row">
-                                    <div class="expert-form__col">
-                                        <div class="expert-form__input-wrapper">
-        
-                                            <input type="text" class="expert-form__input" placeholder="Ваше имя" id="name">
-                                            <label for="name" class="expert-form__label">
-                                                Ваше имя
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="expert-form__col">
-                                        <div class="expert-form__input-wrapper">
-        
-                                            <input type="text" class="expert-form__input" placeholder="E-mail или телефон"
-                                                id="contact">
-                                            <label for="contact" class="expert-form__label">
-                                                E-mail или телефон
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="expert-form__col expert-form__col--fullwidth">
-                                        <div class="expert-form__input-wrapper">
-        
-                                            <input type="text" class="expert-form__input" placeholder="Ваш вопрос"
-                                                id="question">
-                                            <label for="question" class="expert-form__label">
-                                                Ваш вопрос
-                                            </label>
-                                        </div>
-                                    </div>
-        
-                                </div>
-                                <div class="expert-form__controls">
-                                    <div class="expert-form__policy">
-                                        <label class="expert-form__policy-checkbox">
-                                            <input type="checkbox" class="expert-form__policy-checkbox-input">
-                                            <span class="expert-form__policy-checkbox-mark">
-                                                <svg width="14" height="14" aria-hidden="true" class="icon-checkmark">
-                                                    <use xlink:href="#checkmark"></use>
-                                                </svg>
-                                            </span>
-                                            <span class="expert-form__policy-checkbox-text">
-                                                Нажимая кнопку «Отправить», вы соглашаетесь с <a href="#">
-                                                    Политикой конфиденциальности
-                                                </a>
-                                            </span>
-        
-                                        </label>
-                                    </div>
-        
-                                    <button class="expert-form__policy-submit" type="submit">
-                                        <span class="expert-form__policy-submit-text" data-text="Отправить">
-                                            <span class="expert-form__policy-submit-inner">
-                                                Отправить
-                                            </span>
-                                        </span>
-                                    </button>
-                                </div>
-                            </form>
+                        <div class="page-footer__social">
+                            <a href="#" class="page-footer__social-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-facebook">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="page-footer__social-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-twitter">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="page-footer__social-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="page-footer__social-link">
+                                <svg width="14" height="14" aria-hidden="true" class="icon-vk">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </a>
                         </div>
-        
                     </div>
+                    <div class="page-footer__nav">
+                        <div class="page-footer__nav-row">
+                            <div class="page-footer__nav-col">
+                                <h4 class="page-footer__nav-col-heading">
+                                    Меню
+                                </h4>
+                                <ul class="page-footer__nav-list">
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+                                            <span class="page-footer__nav-link-text" data-text="Практики">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    Практики
+                                                </span>
+                                            </span>
+        
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+                                            <span class="page-footer__nav-link-text" data-text="Отрасли">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    Отрасли
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+                                            <span class="page-footer__nav-link-text" data-text="Социальная активность">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    Социальная активность
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+                                            <span class="page-footer__nav-link-text" data-text="Пресс-центр">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    Пресс-центр
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+                                            <span class="page-footer__nav-link-text" data-text="Контакты">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    Контакты
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page-footer__nav-col">
+                                <h4 class="page-footer__nav-col-heading">
+                                    Компания
+                                </h4>
+                                <ul class="page-footer__nav-list">
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+        
+                                            <span class="page-footer__nav-link-text" data-text="О компании">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    О компании
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+        
+                                            <span class="page-footer__nav-link-text" data-text=" Награды и рейтинги">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    Награды и рейтинги
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+        
+                                            <span class="page-footer__nav-link-text" data-text="Команда">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    Команда
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="page-footer__nav-list-item">
+                                        <a href="#" class="page-footer__nav-link">
+        
+                                            <span class="page-footer__nav-link-text" data-text="Карьера">
+                                                <span class="page-footer__nav-link-text-inner">
+                                                    Карьера
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+        
+                                </ul>
+                            </div>
+                            <div class="page-footer__nav-col">
+                                <h4 class="page-footer__nav-col-heading">
+                                    Контакты
+                                </h4>
+                                <div class="page-footer__contacts">
+                                    <div class="page-footer__contacts-item">
+                                        <h4 class="page-footer__contacts-heading">
+                                            Информационная почта
+                                        </h4>
+                                        <div class="page-footer__contacts-info">
+                                            <a href="mailto:info@ypartners.ru">info@ypartners.ru</a>
+                                        </div>
+                                    </div>
+                                    <div class="page-footer__contacts-item">
+                                        <h4 class="page-footer__contacts-heading">
+                                            Телефон
+                                        </h4>
+                                        <div class="page-footer__contacts-info">
+                                            <a href="tel:8 843 223 03 57">88432230357</a>
+                                        </div>
+                                    </div>
+                                    <div class="page-footer__contacts-item">
+                                        <h4 class="page-footer__contacts-heading">
+                                            Адрес офиса
+                                        </h4>
+                                        <div class="page-footer__contacts-info">
+                                            Республика Татарстан, Казань,<br> ул Чернышевского, д. 33,2 этаж
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-footer__copyright">
+                        © 2021 Yalilov & Partners
+                    </div>
+                    <a href="#" class="page-footer__made-by">
+                        Создание сайта
+        
+        
+        
+                        <img src="img/mw-logo-dark.svg" alt="" class="page-footer__made-by-logo" width="80">
+        
+                    </a>
                 </div>
             </div>
-        </section>
+        </footer>       
+       
+
         <style>
             .ie-placeholder {
                 z-index: 4000;

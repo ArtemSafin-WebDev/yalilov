@@ -18,12 +18,11 @@ export default function expertForm() {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: expertForm,
-                    start: 'center bottom',
-                   
-                    scrub: false,
-                    toggleActions: 'play pause play reverse',
-                    markers: false,
-                    onEnter: () => console.log('Enter')
+                    start: () => `top top+=${logo.getBoundingClientRect().top + logo.offsetHeight}`,
+                    end: `bottom top+=${logo.getBoundingClientRect().top + logo.offsetHeight}`,
+                    
+                    toggleActions: 'play reverse play reverse',
+                    markers: false
                 }
             });
 

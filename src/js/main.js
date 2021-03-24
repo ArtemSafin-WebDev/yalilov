@@ -20,6 +20,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import publicationsSlider from './publicationsSlider';
 import expertForm from './expertForm';
+import anchorLinks from './anchorLinks';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     aboutAnimations();
     expertForm();
+    anchorLinks();
+    
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
 
