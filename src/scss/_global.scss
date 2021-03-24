@@ -92,7 +92,7 @@ ol {
 
 ol {
     counter-reset: ordered-list;
-    li {
+    & > li {
         counter-increment: ordered-list;
         &::before {
             content: counter(ordered-list) '.';
