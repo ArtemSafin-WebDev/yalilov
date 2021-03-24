@@ -306,6 +306,26 @@
     font-size: 1.6rem;
     line-height: 2rem;
     position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -1.6rem;
+        transform: translateX(-50%);
+        width: 11.2rem;
+        height: 11.2rem;
+        border-radius: 50%;
+        background: #f9f9f9;
+        transition: transform 0.2s;
+        z-index: -1;
+        pointer-events: none;
+        backface-visibility: hidden;
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
 
     svg {
         display: none;
@@ -329,23 +349,7 @@
         }
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        top: -1.6rem;
-        transform: translateX(-50%);
-        width: 11.2rem;
-        height: 11.2rem;
-        border-radius: 50%;
-        background: #f9f9f9;
-        transition: transform 0.2s;
-        z-index: -1;
-        pointer-events: none;
-        @include breakpoint(mobile) {
-            display: none;
-        }
-    }
+   
 
     .no-touch &:hover {
         &::before {
