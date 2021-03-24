@@ -210,7 +210,6 @@
         top: 1.8rem;
         margin-left: -10rem;
         width: 18rem;
-        
     }
 }
 
@@ -306,5 +305,136 @@
             height: 1rem;
             margin-right: 0.7rem;
         }
+    }
+}
+
+.team-page__alpha-letters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+      
+        margin: 0 calc(-1 * var(--content-padding));
+        margin-bottom: 2rem;
+        padding: 0 var(--content-padding);
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        &::after {
+            content: '';
+            height: 1px;
+            width: var(--content-padding);
+            flex-shrink: 0;
+        }
+
+        @include noScrollbar();
+    }
+}
+
+.team-page__alpha-letter {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 3.1px;
+    text-transform: uppercase;
+    color: #75837f;
+    display: inline-flex;
+    align-items: center;
+    flex-grow: 1;
+
+   
+
+    &:link,
+    &:visited {
+        color: #75837f;
+    }
+
+
+    
+    .no-touch &:hover,
+    .touch &:active {
+        color: var(--text-color);
+    }
+
+    &::after {
+        content: '•';
+        font: inherit;
+        padding: 0 0.3rem;
+        margin: 0 auto;
+        color: #75837f;
+
+        @include breakpoint(mobile) {
+            padding: 0 0.5rem;
+        }
+    }
+
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.team-page__alpha-results-letter {
+    min-height: 8.4rem;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #bac1bf;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    font-family: var(--orchidea);
+    padding: 0.5rem 0;
+
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        min-height: 6.2rem;
+    }
+
+    
+}
+
+
+.team-page__alpha-results-card {
+  
+    font-family: var(--orchidea);
+    border-top: 1px solid #bac1bf;
+    display: flex;
+    align-items: center;
+    padding: 2.6rem 0;
+
+    @include breakpoint(mobile) {
+        align-items: baseline;
+        padding: 1.8rem 0;
+    }
+}
+
+.team-page__alpha-results-block:last-child {
+    .team-page__alpha-results-letter:last-child,
+    .team-page__alpha-results-list-item:last-child .team-page__alpha-results-card {
+        border-bottom: 1px solid #bac1bf;
+    }
+}
+
+.team-page__alpha-results-card-name {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-right: 2rem;
+    font-weight: 400;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+    }
+}
+
+.team-page__alpha-results-card-role {
+    margin-left: auto;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: right;
+    letter-spacing: 0.1rem;
+    font-family: var(--circe);
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
     }
 }

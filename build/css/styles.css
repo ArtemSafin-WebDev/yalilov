@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Swiper 6.4.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -5942,3 +5943,126 @@ select:-webkit-autofill:focus {
         width: 1rem;
         height: 1rem;
         margin-right: 0.7rem; } }
+
+.team-page__alpha-letters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem; }
+  @media only screen and (max-width: 640px) {
+    .team-page__alpha-letters {
+      margin: 0 calc(-1 * var(--content-padding));
+      margin-bottom: 2rem;
+      padding: 0 var(--content-padding);
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch; }
+      .team-page__alpha-letters::after {
+        content: '';
+        height: 1px;
+        width: var(--content-padding);
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+      .team-page__alpha-letters::-webkit-scrollbar * {
+        background: transparent; }
+      .team-page__alpha-letters::-webkit-scrollbar-track {
+        background-color: transparent; }
+      .team-page__alpha-letters::-webkit-scrollbar {
+        display: none;
+        background-color: transparent; }
+      .team-page__alpha-letters::-webkit-scrollbar-thumb {
+        background-color: transparent; } }
+
+.team-page__alpha-letter {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 3.1px;
+  text-transform: uppercase;
+  color: #75837f;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+  .team-page__alpha-letter:link, .team-page__alpha-letter:visited {
+    color: #75837f; }
+  .no-touch .team-page__alpha-letter:hover,
+  .touch .team-page__alpha-letter:active {
+    color: var(--text-color); }
+  .team-page__alpha-letter::after {
+    content: '•';
+    font: inherit;
+    padding: 0 0.3rem;
+    margin: 0 auto;
+    color: #75837f; }
+    @media only screen and (max-width: 640px) {
+      .team-page__alpha-letter::after {
+        padding: 0 0.5rem; } }
+  .team-page__alpha-letter:last-child::after {
+    display: none; }
+
+.team-page__alpha-results-letter {
+  min-height: 8.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #bac1bf;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  font-family: var(--orchidea);
+  padding: 0.5rem 0; }
+  @media only screen and (max-width: 640px) {
+    .team-page__alpha-results-letter {
+      font-size: 2.4rem;
+      line-height: 1.2;
+      min-height: 6.2rem; } }
+
+.team-page__alpha-results-card {
+  font-family: var(--orchidea);
+  border-top: 1px solid #bac1bf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.6rem 0; }
+  @media only screen and (max-width: 640px) {
+    .team-page__alpha-results-card {
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
+      padding: 1.8rem 0; } }
+
+.team-page__alpha-results-block:last-child .team-page__alpha-results-letter:last-child,
+.team-page__alpha-results-block:last-child .team-page__alpha-results-list-item:last-child .team-page__alpha-results-card {
+  border-bottom: 1px solid #bac1bf; }
+
+.team-page__alpha-results-card-name {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin-right: 2rem;
+  font-weight: 400; }
+  @media only screen and (max-width: 640px) {
+    .team-page__alpha-results-card-name {
+      font-size: 2rem; } }
+
+.team-page__alpha-results-card-role {
+  margin-left: auto;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  text-align: right;
+  letter-spacing: 0.1rem;
+  font-family: var(--circe); }
+  @media only screen and (max-width: 640px) {
+    .team-page__alpha-results-card-role {
+      font-size: 1.2rem; } }
