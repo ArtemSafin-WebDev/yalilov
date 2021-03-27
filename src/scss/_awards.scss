@@ -1,0 +1,298 @@
+.awards__content {
+    padding-top: 18rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--sidebar-width);
+    padding-bottom: 6rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        min-height: auto;
+        padding-top: 12rem;
+    }
+}
+
+.awards__intro {
+    margin-bottom: 10rem;
+
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+        padding-left: 3rem;
+    }
+}
+
+.awards__row {
+    display: flex;
+
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+
+.awards__left-col {
+    width: 34.5rem;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-shrink: 1;
+    }
+}
+
+.awards__right-col {
+    width: 30%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.awards__heading {
+    font-weight: 300;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    font-family: var(--orchidea);
+    display: flex;
+    align-items: flex-start;
+    padding-top: 1.4rem;
+    @include breakpoint(mobile) {
+        padding-top: 0;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+    &::after {
+        content: '';
+        width: 1px;
+        height: 1px;
+        flex-grow: 1;
+        background-color: #c3c9c8;
+        margin: 0 2.5rem;
+        margin-bottom: 1.2rem;
+        margin-top: 1.7rem;
+        @include breakpoint(mobile) {
+            margin: 0 0.5rem;
+            margin-top: 1.2rem;
+            margin-left: 2rem;
+        }
+    }
+}
+
+.awards__intro-large-text {
+    font-size: 4.5rem;
+    line-height: 6.3rem;
+    font-family: var(--orchidea);
+    max-width: 80rem;
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 3.3rem;
+    }
+}
+
+.awards__results {
+    padding-left: 34.5rem;
+
+    @include breakpoint(mobile) {
+        padding-left: 0;
+    }
+}
+
+.awards__card {
+   
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.awards__year {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-family: var(--orchidea);
+    margin-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+        font-size: 1.6rem;
+    }
+    &::before {
+        content: '';
+        background-color: #edefee;
+        width: 1px;
+        height: 1px;
+        flex-grow: 1;
+        margin-right: 2rem;
+    }
+}
+
+
+
+.awards__card-image-container {
+    flex-shrink: 0;
+    position: relative;
+    width: 23rem;
+    margin-right: 11rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1.8rem;
+        flex-shrink: 1;
+        max-width: 20rem;
+    }
+  
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
+}
+
+.awards__rating-magazine {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-50%);
+    overflow: hidden;
+    backface-visibility: hidden;
+
+    @include breakpoint(mobile) {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+.awards__rating-magazine-image {
+    display: block;
+    max-width: 6rem;
+    max-height: 4.4rem;
+    height: auto;
+    width: auto;
+
+    
+    @include objectFitContain();
+
+    @include breakpoint(mobile) {
+        max-width: 4rem;
+        max-height: 3rem;
+    }
+}
+
+.awards__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitContain();
+}
+
+.awards__card-content {
+    width: 40%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.awards__card-title {
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    font-family: var(--orchidea);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    padding-right: 4rem;
+
+    @include breakpoint(mobile) {
+        padding-right: 0;
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 1.6rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.awards__card-link {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.2;
+
+    letter-spacing: 0.1rem;
+    text-transform: lowercase;
+    font-family: var(--orchidea);
+    display: inline-flex;
+    align-items: center;
+
+   
+    svg {
+        flex-shrink: 0;
+        width: 0.3rem;
+        height: 0.5rem;
+        flex-shrink: 0;
+        margin-left: 1.1rem;
+        fill: currentColor;
+    }
+
+    .no-touch &:hover {
+        .awards__card-link-text-inner {
+            transform: translateY(100%);
+        }
+
+        .awards__card-link-text::after {
+            transform: translateY(100%);
+        }
+    }
+}
+
+.awards__card-link-text {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        transition: transform 0.4s;
+    }
+}
+
+.awards__card-link-text-inner {
+    transition: transform 0.3s;
+}
+
+
+.awards__list-item {
+    margin-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
