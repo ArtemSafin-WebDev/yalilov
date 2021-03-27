@@ -77,11 +77,21 @@
     user-select: none;
     -webkit-user-drag: none;
     -webkit-app-region: no-drag;
+
+    &--large {
+        width: 32rem;
+        margin-right: 6rem;
+    }
     
 
     @include breakpoint(mobile) {
         width: 13rem;
         margin-right: 2rem;
+
+        &--large {
+            width: 18rem;
+            margin-right: 2rem;
+        }
     }
 
     .no-touch &:hover {
@@ -104,11 +114,20 @@
     height: 38.2rem;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8rem), calc(100% - 2.8rem) 100%, 0 100%);
 
+
+    .team__card--large & {
+        height: 43rem;
+    }
+
     @include breakpoint(mobile) {
         
         height: 17.6rem;
         margin-bottom: 1.5rem;
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1.3rem), calc(100% - 1.3rem) 100%, 0 100%);
+
+        .team__card--large & {
+            height: 26rem;
+        }
     }
 }
 
@@ -118,16 +137,14 @@
     bottom: 0;
     height: auto;
     width: auto;
-    height: 32rem;
+    height: 82%;
     transform: translateX(-50%);
     max-width: 100%;
     filter: grayscale(100%);
     transition: filter 0.2s;
     @include objectFitContainBottom();
 
-    @include breakpoint(mobile) {
-        height: 14.3rem;
-    }
+   
 }
 
 .team__card-name {
