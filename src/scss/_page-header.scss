@@ -26,6 +26,7 @@
     width: var(--sidebar-width);
     position: relative;
     z-index: 700;
+    padding-top: 0.5rem;
 
     @include breakpoint(mobile) {
         display: none;

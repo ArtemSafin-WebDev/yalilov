@@ -1354,7 +1354,8 @@ select:-webkit-autofill:focus {
           align-items: flex-start;
   width: var(--sidebar-width);
   position: relative;
-  z-index: 700; }
+  z-index: 700;
+  padding-top: 0.5rem; }
   @media only screen and (max-width: 640px) {
     .page-header__languages {
       display: none; } }
@@ -5739,7 +5740,8 @@ select:-webkit-autofill:focus {
   margin-bottom: 8rem; }
   @media only screen and (max-width: 640px) {
     .team-page__intro {
-      margin-bottom: 3rem; } }
+      margin-bottom: 6rem;
+      padding-left: 3rem; } }
 
 .team-page__about-text {
   font-weight: 300;
@@ -6043,6 +6045,8 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center;
   padding: 2.6rem 0; }
+  .no-touch .team-page__alpha-results-card:hover {
+    color: #8C9894; }
   @media only screen and (max-width: 640px) {
     .team-page__alpha-results-card {
       -webkit-box-align: baseline;
@@ -6381,14 +6385,14 @@ select:-webkit-autofill:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: -1rem; }
+  margin: -1rem -3rem; }
   @media only screen and (max-width: 640px) {
     .industries-page__card-services-list {
       margin: 0;
       display: block; } }
 
 .industries-page__card-services-list-item {
-  padding: 1rem;
+  padding: 1rem 3rem;
   width: 33.33%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7103,7 +7107,21 @@ select:-webkit-autofill:focus {
 
 .industry__key-projects-card {
   padding: 4.8rem 6.4rem;
-  background-color: #f7f8f8; }
+  background-color: #f7f8f8;
+  position: relative; }
+  .industry__key-projects-card::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 1.8rem 1.8rem;
+    border-color: transparent transparent #b4bcba transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+    @media only screen and (max-width: 640px) {
+      .industry__key-projects-card::after {
+        border-width: 0 0 1.4rem 1.4rem; } }
   @media only screen and (max-width: 640px) {
     .industry__key-projects-card {
       padding: 1.8rem 2rem; } }

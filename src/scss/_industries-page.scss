@@ -281,7 +281,7 @@
 
 .industries-page__card-services-list {
     display: flex;
-    margin: -1rem;
+    margin: -1rem -3rem;
 
     @include breakpoint(mobile) {
         margin: 0;
@@ -290,7 +290,7 @@
 }
 
 .industries-page__card-services-list-item {
-    padding: 1rem;
+    padding: 1rem 3rem;
     width: 33.33%;
     display: flex;
     flex-direction: column;
