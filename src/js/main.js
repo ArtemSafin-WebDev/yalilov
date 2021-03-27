@@ -21,6 +21,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import publicationsSlider from './publicationsSlider';
 import expertForm from './expertForm';
 import anchorLinks from './anchorLinks';
+import practicNav from './practicNav';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutAnimations();
     expertForm();
     anchorLinks();
+    practicNav();
     
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
