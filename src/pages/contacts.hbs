@@ -1,0 +1,60 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__content">
+            <div class="contacts__row">
+                <div class="contacts__left-col">
+                    <h1 class="contacts__heading">
+                        Контакты
+                    </h1>
+                </div>
+                <div class="contacts__right-col">
+                    <div class="contacts__info">
+                        <a href="#" class="contacts__phone-link">
+                            <div class="contacts__phone-link-text" data-text="8 843 223 03 57">
+                                <div class="contacts__phone-link-text-inner">
+                                    8 843 223 03 57
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="contacts__mail-link">
+                            <div class="contacts__mail-link-text" data-text="info@ypartners.ru">
+                                <div class="contacts__mail-link-text-inner">
+                                    info@ypartners.ru
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contacts__address">
+                        <h2 class="contacts__address-heading">
+                            Наш офис
+                        </h2>
+                        <div class="contacts__address-text">
+                            <p>
+                                Фатыха Карима, 20, Казань, 420021<br>
+                                Республика Татарстан
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contacts__map">
+                        <div class="contacts__map-container">
+                            <div class="contacts__map-element js-contacts-map" data-lat="55.778067" data-lng="49.113933" 
+                                data-pin="img/pin.svg">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{> expert-form }}
+
+{{/content}}
+{{/extend}}

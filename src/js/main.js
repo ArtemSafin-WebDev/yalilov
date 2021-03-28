@@ -22,6 +22,7 @@ import publicationsSlider from './publicationsSlider';
 import expertForm from './expertForm';
 import anchorLinks from './anchorLinks';
 import practicNav from './practicNav';
+import contactsMap from './contactsMap';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     expertForm();
     anchorLinks();
     practicNav();
+    contactsMap();
     
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
