@@ -1,0 +1,123 @@
+.not-found__content {
+    padding-top: 14rem;
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--sidebar-width);
+    padding-bottom: 6rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        min-height: auto;
+        padding-top: 12rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.not-found__row {
+    display: flex;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+    }
+}
+
+.not-found__left-col,
+.not-found__right-col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin-bottom: 4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.not-found__text-content {
+    max-width: 30rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
+}
+
+.not-found__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.not-found__message {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #75837f;
+    margin-bottom: 3rem;
+}
+
+.not-found__back-link {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-family: var(--orchidea);
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    
+    svg {
+        width: 0.4rem;
+        height: 0.7rem;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        fill: #75837F;
+        transition: fill .2s, transform .2s;
+
+        @include breakpoint(mobile) {
+            margin-left: 1.5rem;
+        }
+    }
+
+    .no-touch &:hover {
+        svg {
+            fill: var(--text-color);
+            transform: scale(1.2);
+        }
+
+        .not-found__back-link-text-inner {
+            transform: translateY(100%);
+        }
+    
+        .not-found__back-link-text::after {
+            transform: translateY(100%);
+        }
+    }
+}
+
+
+
+
+.not-found__back-link-text {
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        transition: transform 0.4s;
+    }
+}
+
+.not-found__back-link-text-inner {
+    transition: transform 0.3s;
+}

@@ -1,0 +1,35 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<section class="not-found">
+    <div class="container">
+        <div class="not-found__content">
+            <div class="not-found__row">
+                <div class="not-found__left-col">
+                    {{> not-found-image }}
+                </div>
+                <div class="not-found__right-col">
+                    <div class="not-found__text-content">
+                        <div class="not-found__message">
+                            Возможно страница была удалена или вовсе не существовала
+                        </div>
+                        <a href="#" class="not-found__back-link">
+                            <div class="not-found__back-link-text" data-text="Вернуться на главную">
+                                <div class="not-found__back-link-text-inner">
+                                    Вернуться на главную
+                                </div>
+                            </div>
+
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
