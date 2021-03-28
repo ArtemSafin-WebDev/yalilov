@@ -7950,7 +7950,7 @@ select:-webkit-autofill:focus {
   font-size: 1.6rem;
   line-height: 1.2;
   font-family: var(--orchidea);
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
