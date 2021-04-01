@@ -326,6 +326,7 @@
     flex-direction: column;
     padding: 15rem 0;
     justify-content: center;
+    padding-left: var(--sidebar-width);
 
     @include breakpoint(mobile) {
         padding: 0;
@@ -342,12 +343,17 @@
 }
 
 .page-header__mobile-menu-left-col {
-    width: 63rem;
+    width: 50%;
+    flex-grow: 1;
     margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     @include breakpoint(mobile) {
         width: 100%;
         padding: 5rem 3rem;
+        flex-grow: 0;
         border-bottom: 1px solid rgba(white, 0.1);
     }
 }
@@ -579,5 +585,86 @@
         visibility: inherit;
         opacity: 1;
         transition: opacity 0.3s, visibility 0.3s;
+    }
+}
+
+
+
+.page-header__dropdown-link {
+    position: relative;
+
+    &:hover {
+
+        .page-header__dropdown-link-btn svg {
+            transform: rotate(0deg);
+        }
+        .page-header__dropdown {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .3s, visibility .3s;
+        }
+    }
+}
+
+.page-header__dropdown-link-btn {
+    display: inline-flex;
+    align-items: flex-end;
+
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    position: relative;
+    cursor: default;
+    
+
+    svg {
+        width: 0.7rem;
+        height: 0.4rem;
+        margin-left: 1.1rem;
+        fill: currentColor;
+        transform: rotate(180deg);
+        transition: transform .2s;
+        margin-bottom: 1rem;
+    }
+
+   
+}
+
+
+.page-header__dropdown {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding-top: 1rem;
+    width: 19rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+    z-index: 100;
+
+   
+}
+
+.page-header__dropdown-inner {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 1.2rem 0;
+    background-color: rgba(white, .5);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
+}
+
+
+.page-header__dropdown-inner-link {
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: .5rem 2rem;
+    transition: background-color .2s, color .2s;
+
+
+    
+    .no-touch &:hover,
+    &.active {
+        background-color: white;
     }
 }

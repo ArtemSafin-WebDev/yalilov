@@ -214,10 +214,10 @@
 
 .expert-form__input:focus ~ .expert-form__label,
 .expert-form__input:not(:placeholder-shown) ~ .expert-form__label {
-    transform: scale(0.7) translateY(-3.8rem);
+    transform: scale(0.7) translateY(-4rem);
 
     @include breakpoint(mobile) {
-        transform: scale(0.6) translateY(-3.2rem);
+        transform: scale(0.6) translateY(-3.5rem);
     }
 }
 

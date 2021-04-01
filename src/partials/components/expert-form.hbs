@@ -35,10 +35,20 @@
                             <div class="expert-form__col">
                                 <div class="expert-form__input-wrapper">
 
-                                    <input type="text" class="expert-form__input" placeholder="E-mail или телефон"
-                                        id="contact" required>
-                                    <label for="contact" class="expert-form__label">
-                                        E-mail или телефон
+                                    <input type="tel" class="expert-form__input js-phone-input" placeholder="Телефон"
+                                        id="phone" required data-parsley-phone>
+                                    <label for="phone" class="expert-form__label">
+                                        Телефон
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="expert-form__col">
+                                <div class="expert-form__input-wrapper">
+
+                                    <input type="email" class="expert-form__input" placeholder="E-mail"
+                                        id="email" required>
+                                    <label for="email" class="expert-form__label">
+                                        E-mail
                                     </label>
                                 </div>
                             </div>
