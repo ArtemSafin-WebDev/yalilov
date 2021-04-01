@@ -651,6 +651,7 @@
     padding: 1.2rem 0;
     background-color: rgba(white, .5);
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
+  
 }
 
 
@@ -661,8 +662,6 @@
     padding: .5rem 2rem;
     transition: background-color .2s, color .2s;
 
-
-    
     .no-touch &:hover,
     &.active {
         background-color: white;

@@ -2006,7 +2006,7 @@ select:-webkit-autofill:focus {
   .page-footer {
     background: rgba(24, 48, 41, 0.5); }
     .page-footer--dark {
-      background: white; } }
+      background: #F9F9F9; } }
 
 @media only screen and (max-width: 640px) {
   .page-footer {
@@ -2889,7 +2889,7 @@ select:-webkit-autofill:focus {
   z-index: 10;
   opacity: 0; }
   .home-video__green-backplate--grey {
-    background: #F9F9F9; }
+    background: white; }
 
 @media only screen and (max-width: 640px) {
   .industries {
@@ -7060,7 +7060,11 @@ select:-webkit-autofill:focus {
   left: 52rem;
   right: calc(-1 * (100vw - 100% - var(--sidebar-width, 0)));
   z-index: -1;
-  pointer-events: none; }
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0); }
   @media only screen and (max-width: 1024px) {
     .industry__intro-bg {
       left: 35rem; } }
@@ -7080,7 +7084,8 @@ select:-webkit-autofill:focus {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 20; }
 
 @media only screen and (max-width: 640px) {
   .industry__wrapper {
