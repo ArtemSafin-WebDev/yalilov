@@ -640,6 +640,7 @@
     visibility: hidden;
     transition: opacity .3s, visibility 0s linear .3s;
     z-index: 100;
+   
 
    
 }
@@ -649,7 +650,10 @@
     flex-direction: column;
     
     padding: 1.2rem 0;
-    background-color: rgba(white, .5);
+    background-color: rgba(#183029, .6);
+    color: white;
+
+ 
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
   
 }
@@ -662,8 +666,11 @@
     padding: .5rem 2rem;
     transition: background-color .2s, color .2s;
 
+    
+
     .no-touch &:hover,
     &.active {
-        background-color: white;
+        background-color: var(--text-color);
+        color: white;
     }
 }

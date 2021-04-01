@@ -1988,7 +1988,8 @@ select:-webkit-autofill:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1.2rem 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(24, 48, 41, 0.6);
+  color: white;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%); }
 
@@ -2000,7 +2001,8 @@ select:-webkit-autofill:focus {
   -webkit-transition: background-color .2s, color .2s;
   transition: background-color .2s, color .2s; }
   .no-touch .page-header__dropdown-inner-link:hover, .page-header__dropdown-inner-link.active {
-    background-color: white; }
+    background-color: var(--text-color);
+    color: white; }
 
 @media only screen and (max-width: 768px) {
   .page-footer {
