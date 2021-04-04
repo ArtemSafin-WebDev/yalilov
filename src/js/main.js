@@ -23,6 +23,8 @@ import expertForm from './expertForm';
 import anchorLinks from './anchorLinks';
 import practicNav from './practicNav';
 import contactsMap from './contactsMap';
+import socialSlider from './socialSlider';
+import socialNav from './socialNav';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
     anchorLinks();
     practicNav();
     contactsMap();
+    socialSlider();
+    socialNav();
     
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
