@@ -107,6 +107,24 @@
     display: flex;
     align-items: center;
 
+    .no-touch &:hover {
+        .awards__card-link-text-inner {
+            transform: translateY(100%);
+        }
+
+        .awards__card-link-text::after {
+            transform: translateY(100%);
+        }
+
+        .awards__card-image-container::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .awards__card-image {
+            transform: scale(1.2);
+        }
+    }
+
     @include breakpoint(mobile) {
         flex-direction: column;
         align-items: initial;
@@ -144,6 +162,28 @@
     position: relative;
     width: 23rem;
     margin-right: 11rem;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+       
+        width: 22rem;
+        height: 22rem;
+        border-radius: 50%;
+        transition: transform .3s;
+        background: #F9F9F9;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: -1;
+    }
+  
+    &::after {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
 
     @include breakpoint(mobile) {
         width: 100%;
@@ -152,12 +192,8 @@
         flex-shrink: 1;
         max-width: 20rem;
     }
+
   
-    &::before {
-        content: '';
-        display: block;
-        padding-bottom: 56.25%;
-    }
 }
 
 .awards__rating-magazine {
@@ -204,6 +240,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    transition: transform .3s;
     @include objectFitContain();
 }
 
@@ -258,15 +295,7 @@
         fill: currentColor;
     }
 
-    .no-touch &:hover {
-        .awards__card-link-text-inner {
-            transform: translateY(100%);
-        }
-
-        .awards__card-link-text::after {
-            transform: translateY(100%);
-        }
-    }
+  
 }
 
 .awards__card-link-text {
