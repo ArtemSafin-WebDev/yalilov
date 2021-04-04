@@ -6399,6 +6399,9 @@ select:-webkit-autofill:focus {
   .no-touch .industries-page__card-main-content:hover .industries-page__card-card-image {
     -webkit-filter: grayscale(0);
             filter: grayscale(0); }
+  .no-touch .industries-page__card-main-content:hover .industries-page__card-link svg {
+    -webkit-transform: translateX(0.4rem);
+            transform: translateX(0.4rem); }
 
 .industries-page__card-image-container {
   -ms-flex-negative: 0;
@@ -6514,7 +6517,11 @@ select:-webkit-autofill:focus {
     height: 1.2rem;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    margin-left: 0.9rem; }
+    margin-left: 0.9rem;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s; }
 
 .industries-page__card-bottom-row {
   padding-left: 34rem; }
