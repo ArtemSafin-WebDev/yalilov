@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="format-detection" content="telephone=no">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#183029">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="assets/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <script src="assets/js/ie11CustomProperties.js"></script>
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
@@ -303,7 +314,7 @@
                     <h2 class="expert-form__heading">
                         Вы можете задать<br> вопрос эксперту
                     </h2>
-                    <form action="/" method="POST" class="expert-form__form" data-need-validation>
+                    <form action="/" method="POST" class="expert-form__form" data-need-validation id="contact-form">
                         <div class="expert-form__form-text">
                             <p>
                                 Если у вас есть вопросы к нашему специалисту, оставьте ваши контакты, и мы свяжемся с
@@ -314,7 +325,8 @@
                             <div class="expert-form__col">
                                 <div class="expert-form__input-wrapper">
 
-                                    <input type="text" class="expert-form__input" placeholder="Ваше имя" id="name" required>
+                                    <input type="text" class="expert-form__input" placeholder="Ваше имя" id="name"
+                                        required>
                                     <label for="name" class="expert-form__label">
                                         Ваше имя
                                     </label>
@@ -333,8 +345,8 @@
                             <div class="expert-form__col">
                                 <div class="expert-form__input-wrapper">
 
-                                    <input type="email" class="expert-form__input" placeholder="E-mail"
-                                        id="email" required>
+                                    <input type="email" class="expert-form__input" placeholder="E-mail" id="email"
+                                        required>
                                     <label for="email" class="expert-form__label">
                                         E-mail
                                     </label>
@@ -381,6 +393,23 @@
                     </form>
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+    <div class="expert-form__success">
+        <div class="container">
+
+
+            <div class="expert-form__success-row">
+                <h4 class="expert-form__success-heading">
+                    Благодарим за обращение!
+                </h4>
+                <div class="expert-form__success-message">
+                    <p>
+                        Наши специалисты свяжутся с вами и ответят на все вопросы в течение 30 минут!
+                    </p>
+                </div>
             </div>
         </div>
     </div>

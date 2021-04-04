@@ -205,6 +205,12 @@
     position: relative;
     z-index: 700;
 
+    @include breakpoint(mobile) {
+        padding: 1.5rem;
+        margin: -1.5rem;
+        margin-left: 4rem;
+    }
+
     
     // clip-path: polygon(0 0, 50% 0, 50% 100%, 60% 100%, 60% 0, 100% 0, 100% 110%, 0 110%);
 
@@ -251,6 +257,12 @@
         }
 
         @include breakpoint(mobile) {
+            &::before {
+                transform: translateY(4.5px) rotate(45deg);
+            }
+            &::after {
+                transform: translateY(-4.5px) rotate(-45deg);
+            }
         }
     }
 }
