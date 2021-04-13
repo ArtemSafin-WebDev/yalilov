@@ -66,11 +66,15 @@
     align-items: flex-start;
     flex-wrap: nowrap;
     touch-action: pan-x;
+ 
 }
 
 .team__card {
-    width: 28.4rem;
+   
     margin-right: 5.5rem;
+    width: calc(25% - 5.5rem * 3 / 4);
+
+   
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -78,10 +82,10 @@
     -webkit-user-drag: none;
     -webkit-app-region: no-drag;
 
-    &--large {
-        width: 32rem;
-        margin-right: 6rem;
-    }
+    // &--large {
+    //     width: 32rem;
+    //     margin-right: 6rem;
+    // }
     
 
     @include breakpoint(mobile) {
@@ -111,23 +115,23 @@
     transition: background-color 0.2s;
     overflow: hidden;
     margin-bottom: 2rem;
-    height: 38.2rem;
+   
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8rem), calc(100% - 2.8rem) 100%, 0 100%);
 
 
-    .team__card--large & {
-        height: 43rem;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 130%;
     }
 
     @include breakpoint(mobile) {
         
-        height: 17.6rem;
+      
         margin-bottom: 1.5rem;
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1.3rem), calc(100% - 1.3rem) 100%, 0 100%);
 
-        .team__card--large & {
-            height: 26rem;
-        }
+      
     }
 }
 

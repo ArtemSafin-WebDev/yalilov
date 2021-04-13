@@ -38,11 +38,16 @@
 }
 
 .not-found__text-content {
-    max-width: 30rem;
+    max-width: 46rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-right: 0;
+
+    @include breakpoint(tablet) {
+        max-width: 48rem;
+    }
 
     @include breakpoint(mobile) {
         max-width: none;
@@ -70,14 +75,14 @@
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
-    
+
     svg {
         width: 0.4rem;
         height: 0.7rem;
         flex-shrink: 0;
         margin-left: 2rem;
-        fill: #75837F;
-        transition: fill .2s, transform .2s;
+        fill: #75837f;
+        transition: fill 0.2s, transform 0.2s;
 
         @include breakpoint(mobile) {
             margin-left: 1.5rem;
@@ -93,15 +98,12 @@
         .not-found__back-link-text-inner {
             transform: translateY(100%);
         }
-    
+
         .not-found__back-link-text::after {
             transform: translateY(100%);
         }
     }
 }
-
-
-
 
 .not-found__back-link-text {
     display: block;

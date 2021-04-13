@@ -25,6 +25,7 @@ import practicNav from './practicNav';
 import contactsMap from './contactsMap';
 import socialSlider from './socialSlider';
 import socialNav from './socialNav';
+import valuesAnimations from './valuesAnimations';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
     contactsMap();
     socialSlider();
     socialNav();
+
+    valuesAnimations();
+    
     
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
