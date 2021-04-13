@@ -3398,7 +3398,11 @@ select:-webkit-autofill:focus {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -ms-touch-action: pan-x;
-      touch-action: pan-x; }
+      touch-action: pan-x;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 640px) {
+    .team__cards {
+      overflow: visible; } }
 
 .team__card {
   margin-right: 5.5rem;
