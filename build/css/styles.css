@@ -7073,11 +7073,9 @@ select:-webkit-autofill:focus {
     .awards__list-item {
       margin-bottom: 6rem; } }
 
-.industry {
-  margin-bottom: 10rem; }
-  @media only screen and (max-width: 640px) {
-    .industry {
-      margin-bottom: 3rem; } }
+@media only screen and (max-width: 640px) {
+  .industry {
+    margin-bottom: 3rem; } }
 
 .industry__content {
   padding-top: 12rem;
