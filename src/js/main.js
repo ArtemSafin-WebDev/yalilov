@@ -26,6 +26,10 @@ import contactsMap from './contactsMap';
 import socialSlider from './socialSlider';
 import socialNav from './socialNav';
 import valuesAnimations from './valuesAnimations';
+import textPageGallery from './textPageGallery';
+import scrollableTable from './scrollableTable';
+import copyCurrentLink from './copyCurrentLink';
+import similarPublications from './similarPublications';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,7 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
     socialNav();
 
     valuesAnimations();
-    
+    textPageGallery();
+    scrollableTable();
+    copyCurrentLink();
+    similarPublications();
     
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));

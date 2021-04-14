@@ -1,0 +1,107 @@
+.similar-publications {
+    margin-bottom: 15rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.similar-publications__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--sidebar-width);
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.similar-publications__top-row {
+    display: flex;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.similar-publications__heading {
+    font-size: 4.5rem;
+    line-height: 6.3rem;
+    font-weight: 400;
+    font-family: var(--orchidea);
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 3.3rem;
+    }
+}
+
+
+.similar-publications__controls {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.similar-publications__controls-btn {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-family: var(--orchidea);
+    letter-spacing: 0.3rem;
+    text-transform: lowercase;
+    color: #2d423c;
+    transition: color 0.2s;
+
+    &.disabled {
+        color: #a0a6a2;
+        cursor: default;
+    }
+}
+
+.similar-publications__controls-divider {
+    width: 6.8rem;
+    height: 1px;
+    background-color: #a0a6a2;
+    margin: 0 2.4rem;
+    flex-shrink: 0;
+}
+
+
+.similar-publications__cards {
+    display: flex;
+   
+    flex-wrap: nowrap;
+    touch-action: pan-x;
+    overflow-x: hidden;
+    padding: 1rem;
+    margin: -1rem;
+    @include breakpoint(mobile) {
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.similar-publications__card {
+    margin-right: 6.6rem;
+    width: calc(33.33% - 6.6rem * 2 / 3);
+
+   
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
+
+    @include breakpoint(mobile) {
+        width: 28rem;
+        margin-right: 3rem;
+
+       
+    }
+}
