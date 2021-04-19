@@ -30,6 +30,7 @@ import textPageGallery from './textPageGallery';
 import scrollableTable from './scrollableTable';
 import copyCurrentLink from './copyCurrentLink';
 import similarPublications from './similarPublications';
+import socialShowMore from './socialShowMore';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollableTable();
     copyCurrentLink();
     similarPublications();
+    socialShowMore();
     
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));

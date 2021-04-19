@@ -8989,7 +8989,7 @@ select:-webkit-autofill:focus {
     background-color: #c3c9c8;
     margin: 0 2.5rem;
     margin-top: 1.6rem;
-    width: 5rem; }
+    width: 25rem; }
     @media only screen and (max-width: 640px) {
       .social__intro-heading::after {
         margin: 0;
@@ -9065,7 +9065,7 @@ select:-webkit-autofill:focus {
     cursor: default; }
 
 .social__slider-controls-divider {
-  width: 6.8rem;
+  width: 13rem;
   height: 1px;
   background-color: #a0a6a2;
   margin: 0 2.4rem;
