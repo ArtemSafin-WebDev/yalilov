@@ -13,13 +13,13 @@
                 </div>
                 <div class="expert-form__right-col">
                     <h2 class="expert-form__heading">
-                        Будем рады<br> ответить на вопросы
+                        Направить<br>
+                        резюме
                     </h2>
                     <form action="/" method="POST" class="expert-form__form" data-need-validation id="contact-form">
                         <div class="expert-form__form-text">
                             <p>
-                                Если у вас есть вопросы к нашему специалисту, оставьте ваши контакты, и мы свяжемся с
-                                вами в течении 30 минут
+                                Оставьте свои контактные данные, и наш HR-менеджер свяжется с вами для уточнения деталей
                             </p>
                         </div>
                         <div class="expert-form__row">
@@ -36,31 +36,57 @@
                             <div class="expert-form__col">
                                 <div class="expert-form__input-wrapper">
 
-                                    <input type="tel" class="expert-form__input js-phone-input" placeholder="Телефон"
-                                        id="phone" required data-parsley-phone>
-                                    <label for="phone" class="expert-form__label">
-                                        Телефон
+                                    <input type="text" class="expert-form__input" placeholder="Ваша фамилия"
+                                        id="lastname" required>
+                                    <label for="lastname" class="expert-form__label">
+                                        Ваша фамилия
                                     </label>
                                 </div>
                             </div>
                             <div class="expert-form__col">
                                 <div class="expert-form__input-wrapper">
 
-                                    <input type="email" class="expert-form__input" placeholder="E-mail" id="email"
+                                    <input type="tel" class="expert-form__input js-phone-input"
+                                        placeholder="Ваш телефон" id="phone" required data-parsley-phone>
+                                    <label for="phone" class="expert-form__label">
+                                        Ваш телефон
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="expert-form__col">
+                                <div class="expert-form__input-wrapper">
+
+                                    <input type="email" class="expert-form__input" placeholder="Ваш e-mail" id="email"
                                         required>
                                     <label for="email" class="expert-form__label">
-                                        E-mail
+                                        Ваш e-mail
                                     </label>
                                 </div>
                             </div>
                             <div class="expert-form__col expert-form__col--fullwidth">
                                 <div class="expert-form__input-wrapper">
 
-                                    <input type="text" class="expert-form__input" placeholder="Ваш вопрос"
-                                        id="question">
-                                    <label for="question" class="expert-form__label">
-                                        Ваш вопрос
+                                    <input type="text" class="expert-form__input" placeholder="Сопроводительное письмо"
+                                        id="letter" required>
+                                    <label for="letter" class="expert-form__label">
+                                        Сопроводительное письмо
                                     </label>
+                                </div>
+                            </div>
+                            <div class="expert-form__col expert-form__col--fullwidth">
+                                <div class="expert-form__input-wrapper">
+                                    <label class="expert-form__file-upload js-file-upload">
+                                        <input type="file" class="expert-form__file-upload-input">
+                                        <div class="expert-form__file-upload-content js-file-upload-text">
+                                            <svg width="14" height="14" aria-hidden="true" class="icon-paperclip">
+                                                <use xlink:href="#paperclip"></use>
+                                            </svg>
+                                            <div class="expert-form__file-upload-large-text">
+                                                Прикрепить файл резюме
+                                            </div>
+                                        </div>
+                                    </label>
+
                                 </div>
                             </div>
 

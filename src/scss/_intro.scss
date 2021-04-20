@@ -30,7 +30,7 @@
     line-height: 6rem;
     margin-bottom: 6rem;
     font-family: var(--orchidea);
-    margin-top: 16rem;
+    margin-top: auto;
 
     @include breakpoint(mobile) {
         font-weight: 500;

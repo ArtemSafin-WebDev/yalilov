@@ -31,6 +31,7 @@ import scrollableTable from './scrollableTable';
 import copyCurrentLink from './copyCurrentLink';
 import similarPublications from './similarPublications';
 import socialShowMore from './socialShowMore';
+import vacancyAccordions from './vacancyAccordions';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
     copyCurrentLink();
     similarPublications();
     socialShowMore();
+    vacancyAccordions();
+    
     
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
