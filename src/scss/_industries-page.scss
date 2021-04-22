@@ -24,7 +24,7 @@
 }
 
 .industries-page__left-col {
-    width: 34.5rem;
+    width: var(--left-col-width);
     flex-shrink: 0;
 
     @include breakpoint(mobile) {
@@ -197,12 +197,21 @@
 
 .industries-page__card-title {
     font-size: 6.4rem;
+    font-size: 5rem;
     line-height: 1.2;
     margin-left: -14rem;
     position: relative;
     font-family: var(--orchidea);
     font-weight: 400;
     margin-right: 3rem;
+
+    @media screen and (max-width: 1470px) {
+        font-size: 4.5rem;
+    }
+
+    @include breakpoint(desktop) {
+        
+    }
 
     @include breakpoint(mobile) {
         font-size: 2.7rem;

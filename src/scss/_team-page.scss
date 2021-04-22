@@ -24,7 +24,7 @@
 }
 
 .team-page__left-col {
-    width: 34.5rem;
+    width: var(--left-col-width);
     flex-shrink: 0;
 
     @include breakpoint(mobile) {
@@ -145,6 +145,33 @@
     width: 35rem;
     position: relative;
 
+
+    @media screen and (max-width: 1600px) {
+        width: 30rem;
+    }
+    @media screen and (max-width: 1280px) {
+        width: 28rem;
+    }
+    @media screen and (max-width: 1100px) {
+        width: 26rem;
+    }
+    @media screen and (max-width: 1060px) {
+        width: 24rem;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 30rem;
+    }
+    @media screen and (max-width: 968px) {
+        width: 28rem;
+    }
+    @media screen and (max-width: 920px) {
+        width: 25rem;
+    }
+    @media screen and (max-width: 900px) {
+        width: 24rem;
+    }
+   
+
     @include breakpoint(mobile) {
         width: 100%;
     }
@@ -207,6 +234,16 @@
     margin-left: -12rem;
     width: 23rem;
 
+    @media screen and (max-width: 1600px) {
+        margin-left: -14rem;
+        top: 3rem;
+    }
+    @media screen and (max-width: 1280px) {
+       
+        top: 2rem;
+    }
+  
+
     @include breakpoint(mobile) {
         top: 1.8rem;
         margin-left: -10rem;
@@ -222,6 +259,10 @@
     margin-bottom: 0.6rem;
     position: relative;
 
+    @media screen and (max-width: 1280px) {
+        font-size: 2.4rem;
+    }
+
     @include breakpoint(mobile) {
         font-size: 2.2rem;
     }
@@ -232,6 +273,10 @@
     line-height: 2.1rem;
     letter-spacing: 0.1rem;
     position: relative;
+    @media screen and (max-width: 1280px) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.2rem;
@@ -253,6 +298,10 @@
             color: white;
             clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%);
             transition: clip-path 0.3s, color 0.2s;
+
+            @media screen and (max-width: 1600px) {
+                clip-path: polygon(0 0, 14rem 0, 14rem 100%, 0 100%);
+            }
 
             @include breakpoint(mobile) {
                 clip-path: polygon(0 0, 10rem 0, 10rem 100%, 0 100%);

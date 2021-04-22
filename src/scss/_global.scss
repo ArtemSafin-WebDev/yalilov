@@ -13,11 +13,15 @@
     --sidebar-width: 23rem;
     --circe: 'Circe', sans-serif;
     --orchidea: 'Orchidea Pro', sans-serif;
+    --left-col-width: 34.5rem;
 
     @include breakpoint(tablet) {
         --content-padding: 4rem;
         --sidebar-width: 25rem;
+        --left-col-width: 30rem;
     }
+
+   
 
     @include breakpoint(small-tablet) {
         --sidebar-width: 20rem;
@@ -45,6 +49,10 @@ html {
 
     @include breakpoint(tablet) {
         font-size: 7px;
+    }
+
+    @media screen and (max-width: 860px) {
+        font-size: 6px;
     }
 
     @include breakpoint(small-tablet) {

@@ -11,7 +11,7 @@
 }
 
 .employee-spec__left-col {
-    width: 35rem;
+    width: var(--left-col-width);
     flex-shrink: 0;
 
     @include breakpoint(mobile) {

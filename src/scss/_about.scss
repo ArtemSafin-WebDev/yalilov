@@ -37,7 +37,7 @@
 }
 
 .about__left-col {
-    width: 34.5rem;
+    width: var(--left-col-width);
     flex-shrink: 0;
 
     @include breakpoint(mobile) {

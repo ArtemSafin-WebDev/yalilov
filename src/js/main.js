@@ -32,6 +32,7 @@ import copyCurrentLink from './copyCurrentLink';
 import similarPublications from './similarPublications';
 import socialShowMore from './socialShowMore';
 import vacancyAccordions from './vacancyAccordions';
+import careerAnimations from './careerAnimations';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
     similarPublications();
     socialShowMore();
     vacancyAccordions();
+    careerAnimations();
+    
     
     
 
