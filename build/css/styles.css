@@ -1392,6 +1392,8 @@ select:-webkit-autofill:focus {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative; }
+  .mobile-menu-open .page-header__logo {
+    display: none; }
 
 .page-header__logo-image {
   width: 14.7rem;
@@ -3747,6 +3749,10 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .about {
       padding-bottom: 7rem; } }
+  .about .page-header__languages {
+    position: fixed;
+    top: 2px;
+    left: 2px; }
 
 .about__content {
   padding-top: 19rem;
@@ -4515,7 +4521,7 @@ select:-webkit-autofill:focus {
   width: 100%;
   margin-top: auto;
   max-width: 57.7rem;
-  max-height: 100%;
+  max-height: 82vh;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center bottom;
