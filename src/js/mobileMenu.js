@@ -39,6 +39,7 @@ export default function mobileMenu() {
     const closeMenu = () => {
         menuOpen = false;
         document.body.classList.remove('mobile-menu-open');
+        document.querySelector('.expert-form-menu').setAttribute("style", "opacity: 0; height: 0; z-index: -1; visibility: hidden;");
         unlockScroll();
     };
 

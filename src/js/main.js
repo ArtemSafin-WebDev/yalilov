@@ -36,7 +36,7 @@ import careerAnimations from './careerAnimations';
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     polyfills();
     detectTouch();
     setScrollbarWidth();
@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
     socialShowMore();
     vacancyAccordions();
     careerAnimations();
-    
-    
-    
+
+
+
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));
 
@@ -81,14 +81,22 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Images has been loaded');
     });
 
-    document.addEventListener('lazyloaded', function() {
+    document.addEventListener('lazyloaded', function () {
         ScrollTrigger.refresh();
     });
 });
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     document.body.classList.add('loaded');
 
     clientsSlider();
     setTimeout(() => document.body.classList.add('animatable'), 300);
 });
+
+const openForm = document.querySelector('.js-open-form');
+openForm.addEventListener('click', () => {
+    let formMenu = document.querySelector('.expert-form-menu');
+    openForm.classList.add('open-form'),
+        formMenu.setAttribute("style", "opacity: 1; height: 100%; z-index: 600; visibility: visible;");
+    console.log('test');
+})

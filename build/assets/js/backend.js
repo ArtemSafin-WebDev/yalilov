@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (contactForm) {
         var expertForm = document.querySelector('.expert-form');
-        contactForm.addEventListener('submit', function(event) {
+        var closeForm = document.querySelector('.expert-form-menu');
+        contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
             if (
                 $(contactForm)
@@ -15,8 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     .parsley()
                     .reset();
                 expertForm.classList.add('success');
-                setTimeout(function() {
+                setTimeout(function () {
                     expertForm.classList.remove('success');
+                    closeForm.setAttribute("style", "opacity: 0; height: 0; z-index: -1; visibility: hidden;");
                 }, 2000);
             }
         });

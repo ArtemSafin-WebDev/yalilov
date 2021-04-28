@@ -2067,6 +2067,83 @@ select:-webkit-autofill:focus {
     background: #f0f0f0;
     color: var(--text-color); }
 
+.page-header .expert-form__top-row::before {
+  display: none; }
+
+.page-header .expert-form__heading {
+  font-size: 3.2rem;
+  margin-left: auto;
+  max-width: 98rem;
+  margin-bottom: 9.3rem; }
+  @media only screen and (max-width: 640px) {
+    .page-header .expert-form__heading {
+      margin-bottom: 1.3rem;
+      margin-top: 1.5rem; } }
+  @media only screen and (max-width: 576px) {
+    .page-header .expert-form__heading {
+      font-size: 2.6rem; } }
+  .page-header .expert-form__heading > br {
+    display: none; }
+
+.page-header .expert-form__form-text {
+  display: none; }
+
+.page-header .expert-form__bg > img {
+  display: none; }
+
+.page-header .expert-form__col {
+  padding: 2.5rem; }
+  @media only screen and (max-width: 640px) {
+    .page-header .expert-form__col {
+      margin-bottom: 0;
+      padding: 1.5rem; } }
+
+.page-header .expert-form__controls {
+  margin-top: 6.3rem; }
+  @media only screen and (max-width: 640px) {
+    .page-header .expert-form__controls {
+      margin-top: 2rem; } }
+
+.page-header .page-header__languages-link.active {
+  color: #fff; }
+
+.page-header .expert-form__left-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.page-header .expert-form__success {
+  background-image: none; }
+
+.page-header .expert-form__success-row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 35rem; }
+
+.page-header .expert-form__success-heading {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  margin-bottom: 4.3rem;
+  width: 100%; }
+
+.page-header .expert-form__success-message {
+  margin-left: 0;
+  font-size: 2.4rem;
+  line-height: 3.5rem;
+  width: 47rem; }
+
 @media only screen and (max-width: 768px) {
   .page-footer {
     background: rgba(24, 48, 41, 0.5); }
@@ -2882,6 +2959,12 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .intro__logo {
       display: none; } }
+  .intro__logo-form {
+    bottom: 5rem;
+    left: 17rem;
+    max-width: 14rem;
+    height: 3.4rem;
+    width: 14rem; }
 
 .intro__logo-image {
   width: 14.8rem;
@@ -5436,6 +5519,19 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 640px) {
     .expert-form {
       padding: 7rem 0; } }
+
+.expert-form-menu {
+  opacity: 0;
+  height: 0;
+  z-index: -1;
+  visibility: hidden;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.7s;
+  transition: 0.7s; }
 
 .expert-form__bg {
   position: absolute;

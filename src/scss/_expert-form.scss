@@ -11,6 +11,19 @@
     }
 }
 
+.expert-form-menu {
+    opacity: 0;
+    height: 0;
+    z-index: -1;
+    visibility: hidden;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.7s;
+}
+
 .expert-form__bg {
     position: absolute;
     z-index: -1;
@@ -38,6 +51,7 @@
 .expert-form__bg-partners {
     height: 21rem;
     max-width: none;
+
     @include breakpoint(mobile) {
         height: 9.4rem;
     }
@@ -51,6 +65,7 @@
         flex-direction: column;
         align-items: initial;
     }
+
     &::before {
         content: '';
 
@@ -153,6 +168,7 @@
         padding: 0;
         width: 100%;
         margin-bottom: 3rem;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -210,8 +226,8 @@
     }
 }
 
-.expert-form__input:focus ~ .expert-form__label,
-.expert-form__input:not(:placeholder-shown) ~ .expert-form__label {
+.expert-form__input:focus~.expert-form__label,
+.expert-form__input:not(:placeholder-shown)~.expert-form__label {
     transform: scale(0.7) translateY(-4rem);
 
     @include breakpoint(mobile) {
@@ -258,6 +274,7 @@
         width: 28rem;
         margin: 0 auto;
     }
+
     &:link,
     &:visited {
         color: white;
@@ -278,6 +295,7 @@
     display: block;
     overflow: hidden;
     position: relative;
+
     &::after {
         content: attr(data-text);
         position: absolute;
@@ -366,7 +384,7 @@
     }
 }
 
-.expert-form__policy-checkbox-input:checked ~ .expert-form__policy-checkbox-mark svg {
+.expert-form__policy-checkbox-input:checked~.expert-form__policy-checkbox-mark svg {
     opacity: 1;
 }
 
@@ -507,6 +525,7 @@
     z-index: 100;
     flex-shrink: 0;
     cursor: pointer;
+
     svg {
         width: 1.9rem;
         height: 1.9rem;
@@ -524,6 +543,7 @@
 
     .no-touch &:hover {
         color: white;
+
         svg {
             fill: white;
         }
