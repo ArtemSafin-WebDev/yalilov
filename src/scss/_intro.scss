@@ -105,9 +105,11 @@
     margin-right: 4rem;
     position: relative;
     transition: opacity 0.2s;
+
     &:last-child {
         margin-right: 0;
     }
+
     svg {
         width: 0.8rem;
         height: 1.4rem;
@@ -161,6 +163,7 @@
         transition: fill 0.2s, transform 0.2s;
         position: relative;
         top: 0.5rem;
+
         @include breakpoint(mobile) {
             margin-left: 1.5rem;
             top: 0.3rem;
@@ -281,6 +284,7 @@
     position: relative;
     border-radius: 0.2rem;
     overflow: hidden;
+
     &::after {
         content: '';
         position: absolute;
@@ -308,6 +312,7 @@
         font-size: 1.6rem;
         line-height: 2.1rem;
     }
+
     &::before {
         content: '';
         display: block;
@@ -362,7 +367,16 @@
     @include breakpoint(mobile) {
         display: none;
     }
+
+    &-form {
+        bottom: 5rem;
+        left: 6rem;
+        max-width: 14rem;
+        height: 3.4rem;
+        width: 14rem;
+    }
 }
+
 
 .intro__logo-image {
     width: 14.8rem;

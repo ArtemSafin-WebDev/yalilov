@@ -39,8 +39,13 @@ export default function mobileMenu() {
     const closeMenu = () => {
         menuOpen = false;
         document.body.classList.remove('mobile-menu-open');
+        
         unlockScroll();
     };
+
+
+    window.openMenu = openMenu;
+    window.closeMenu = closeMenu;
 
     if (btn) {
         btn.addEventListener('click', event => {

@@ -1,7 +1,14 @@
 .about {
     padding-bottom: 15rem;
+
     @include breakpoint(mobile) {
         padding-bottom: 7rem;
+    }
+
+    .page-header__languages {
+        position: fixed;
+        top: 2px;
+        left: 2px;
     }
 }
 
@@ -31,6 +38,7 @@
 
 .about__row {
     display: flex;
+
     @include breakpoint(mobile) {
         flex-direction: column;
     }
@@ -83,6 +91,7 @@
         line-height: 1.2;
         margin-bottom: 2rem;
     }
+
     &::after {
         content: '';
         width: 1px;
@@ -156,6 +165,7 @@
     @include breakpoint(mobile) {
         margin-bottom: 1.6rem;
     }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -216,6 +226,7 @@
     display: flex;
     align-items: center;
     padding-top: 1.6rem;
+
     @include breakpoint(mobile) {
         order: -1;
         padding: 0;
@@ -265,6 +276,7 @@
     @include breakpoint(mobile) {
         display: flex;
         flex-direction: column;
+
         .about__row,
         .about__left-col,
         .about__right-col {
@@ -277,6 +289,7 @@
     .swiper-container {
         overflow: visible;
     }
+
     @include breakpoint(mobile) {
         display: flex;
         flex-direction: column;
@@ -299,10 +312,12 @@
         font-size: 1.3rem;
         line-height: 1.2;
     }
+
     &:link,
     &:visited {
         color: #586964;
     }
+
     svg {
         flex-shrink: 0;
         margin-left: 1.1rem;
@@ -359,8 +374,7 @@
     }
 }
 
-.about__clients-slider-quote {
-}
+.about__clients-slider-quote {}
 
 .about__clients-slider-quote-text {
     font-weight: 300;
@@ -370,6 +384,7 @@
 
     position: relative;
     z-index: 1;
+
     &::before {
         content: '';
         width: 15rem;
@@ -403,6 +418,7 @@
 
 .about__clients-slider-author {
     padding-top: 4rem;
+
     @include breakpoint(mobile) {
         padding-top: 3.5rem;
     }
@@ -425,6 +441,7 @@
     font-weight: 300;
     font-size: 1.8rem;
     line-height: 2.7rem;
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.8rem;
@@ -458,11 +475,13 @@
     overflow: hidden;
     backface-visibility: hidden;
     margin-right: 7rem;
+    cursor: pointer;
 
     @include breakpoint(mobile) {
         width: 7rem;
         margin-right: 3rem;
     }
+
     &::before {
         content: '';
         padding-bottom: 100%;
@@ -535,7 +554,7 @@
         max-width: none;
         padding: 0;
         margin: 0;
-       
+
         margin-bottom: 4rem;
     }
 }
@@ -563,6 +582,7 @@
         width: 100%;
         padding: 0;
         margin-bottom: 3rem;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -592,7 +612,7 @@
         margin-top: 1rem;
 
         @include breakpoint(mobile) {
-            
+
             margin-top: 0.8rem;
         }
     }
@@ -608,6 +628,7 @@
     @include breakpoint(mobile) {
         display: flex;
         flex-direction: column;
+
         .about__left-col,
         .about__right-col,
         .about__row {
@@ -702,6 +723,7 @@
         @include breakpoint(mobile) {
             margin-bottom: 1.2rem;
         }
+
         &:last-child {
             margin-bottom: 0;
         }

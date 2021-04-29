@@ -6,12 +6,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function expertForm() {
-    const expertForm = document.querySelector('.expert-form');
+    const expertForm = document.querySelector('.expert-form:not(.expert-form-menu)');
     const logo = document.querySelector('.page-header__logo')
     if (!expertForm) return;
-
-   
-
     ScrollTrigger.matchMedia({
         
         '(min-width: 641px)': () => {
@@ -30,9 +27,6 @@ export default function expertForm() {
                 autoAlpha: 0,
                 duration: 0.2
             })
-
-            
-
         }
     });
 }

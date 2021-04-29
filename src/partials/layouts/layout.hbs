@@ -48,10 +48,23 @@
 
 
         {{> footer }}
-
+        {{#if secondaryLanguages }}
         <div class="secondary-languages">
-
+            <div class="container">
+                <div class="secondary-languages__content">
+                    <a href="#" class="secondary-languages__link active">
+                        RU
+                    </a>
+                    <a href="#" class="secondary-languages__link">
+                        ENG
+                    </a>
+                    <a href="#" class="secondary-languages__link">
+                        TAT
+                    </a>
+                </div>
+            </div>
         </div>
+        {{/if}}
 
         {{> ie-placeholder }}
         <script src="https://api-maps.yandex.ru/2.1/?apikey=56b34828-1c55-4d55-a994-b917d463fdb5&lang=ru_RU"
