@@ -72,6 +72,11 @@ html {
     }
 }
 
+.lang-tat {
+    --circe: 'Roboto', sans-serif;
+    --orchidea: 'Roboto', sans-serif;
+}
+
 body {
     min-width: 320px;
     font-size: 1.6rem;
@@ -83,6 +88,9 @@ body {
     color: var(--text-color);
     font-family: var(--circe);
     background-color: #fff;
+
+
+
 }
 
 main {
