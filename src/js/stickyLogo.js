@@ -9,7 +9,7 @@ export default function stickyLogo() {
 
     if (!stickyLogo) return;
 
-    
+
     ScrollTrigger.matchMedia({
         '(min-width: 641px)': () => {
             ScrollTrigger.create({
@@ -21,7 +21,7 @@ export default function stickyLogo() {
             });
         }
     })
-   
 
-   
+
+
 }

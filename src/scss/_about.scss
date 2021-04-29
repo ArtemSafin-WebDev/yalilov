@@ -475,6 +475,7 @@
     overflow: hidden;
     backface-visibility: hidden;
     margin-right: 7rem;
+    cursor: pointer;
 
     @include breakpoint(mobile) {
         width: 7rem;

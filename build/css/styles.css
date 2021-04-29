@@ -2961,7 +2961,7 @@ select:-webkit-autofill:focus {
       display: none; } }
   .intro__logo-form {
     bottom: 5rem;
-    left: 17rem;
+    left: 6rem;
     max-width: 14rem;
     height: 3.4rem;
     width: 14rem; }
@@ -4282,7 +4282,8 @@ select:-webkit-autofill:focus {
   border-radius: 50%;
   overflow: hidden;
   backface-visibility: hidden;
-  margin-right: 7rem; }
+  margin-right: 7rem;
+  cursor: pointer; }
   @media only screen and (max-width: 640px) {
     .about__clients-slider-photos-card {
       width: 7rem;
@@ -5521,6 +5522,10 @@ select:-webkit-autofill:focus {
       padding: 7rem 0; } }
 
 .expert-form-menu {
+  background: #183029;
+  color: white;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
   opacity: 0;
   height: 0;
   z-index: -1;
@@ -6059,7 +6064,8 @@ select:-webkit-autofill:focus {
 .expert-form__file-upload-small-text {
   font-size: 1.8rem;
   line-height: 2.7rem;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+  cursor: pointer; }
   @media only screen and (max-width: 640px) {
     .expert-form__file-upload-large-text,
     .expert-form__file-upload-small-text {

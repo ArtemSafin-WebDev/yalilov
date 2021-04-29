@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function expertForm() {
-    const expertForm = document.querySelector('.expert-form');
+    const expertForm = document.querySelector('.expert-form-trigger');
     const logo = document.querySelector('.page-header__logo')
     if (!expertForm) return;
 
