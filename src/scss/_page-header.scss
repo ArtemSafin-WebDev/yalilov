@@ -444,7 +444,8 @@
     @include breakpoint(mobile) {
         margin-bottom: 4rem;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     &:last-child {
