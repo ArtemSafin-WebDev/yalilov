@@ -6473,7 +6473,9 @@ select:-webkit-autofill:focus {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column;
+      max-width: 25rem;
+      margin: 0 auto; } }
 
 .team-page__people-cards-list-item {
   width: 50%;
@@ -6489,8 +6491,7 @@ select:-webkit-autofill:focus {
     .team-page__people-cards-list-item {
       width: 100%;
       padding: 0;
-      margin-bottom: 3rem;
-      padding-right: 8rem; }
+      margin-bottom: 3rem; }
       .team-page__people-cards-list-item:last-child {
         margin-bottom: 0; } }
 
@@ -6581,23 +6582,10 @@ select:-webkit-autofill:focus {
       height: 75%; } }
 
 .team-page__people-card-info {
-  position: absolute;
-  top: 5rem;
-  left: 100%;
-  margin-left: -12rem;
-  width: 23rem; }
-  @media screen and (max-width: 1600px) {
-    .team-page__people-card-info {
-      margin-left: -14rem;
-      top: 3rem; } }
-  @media screen and (max-width: 1280px) {
-    .team-page__people-card-info {
-      top: 2rem; } }
+  margin-top: 2rem; }
   @media only screen and (max-width: 640px) {
     .team-page__people-card-info {
-      top: 1.8rem;
-      margin-left: -10rem;
-      width: 18rem; } }
+      margin-top: 1.5rem; } }
 
 .team-page__people-card-info-name {
   font-weight: 300;
@@ -6626,34 +6614,6 @@ select:-webkit-autofill:focus {
     .team-page__people-card-info-role {
       font-size: 1.2rem;
       line-height: 1.2; } }
-
-@supports ((-webkit-clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%)) or (clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%))) {
-  .team-page__people-card-info-name::after,
-  .team-page__people-card-info-role::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    color: white;
-    -webkit-clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%);
-            clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%);
-    -webkit-transition: color 0.2s, -webkit-clip-path 0.3s;
-    transition: color 0.2s, -webkit-clip-path 0.3s;
-    transition: clip-path 0.3s, color 0.2s;
-    transition: clip-path 0.3s, color 0.2s, -webkit-clip-path 0.3s; }
-    @media screen and (max-width: 1600px) {
-      .team-page__people-card-info-name::after,
-      .team-page__people-card-info-role::after {
-        -webkit-clip-path: polygon(0 0, 14rem 0, 14rem 100%, 0 100%);
-                clip-path: polygon(0 0, 14rem 0, 14rem 100%, 0 100%); } }
-    @media only screen and (max-width: 640px) {
-      .team-page__people-card-info-name::after,
-      .team-page__people-card-info-role::after {
-        -webkit-clip-path: polygon(0 0, 10rem 0, 10rem 100%, 0 100%);
-                clip-path: polygon(0 0, 10rem 0, 10rem 100%, 0 100%); } } }
 
 .team-page__more {
   margin-bottom: 4rem; }

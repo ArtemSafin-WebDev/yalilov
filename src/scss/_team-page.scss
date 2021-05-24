@@ -119,6 +119,8 @@
         flex-wrap: nowrap;
         margin: 0;
         flex-direction: column;
+        max-width: 25rem;
+        margin: 0 auto;
     }
 }
 
@@ -132,7 +134,7 @@
         width: 100%;
         padding: 0;
         margin-bottom: 3rem;
-        padding-right: 8rem;
+        
         &:last-child {
             margin-bottom: 0;
         }
@@ -228,26 +230,10 @@
 }
 
 .team-page__people-card-info {
-    position: absolute;
-    top: 5rem;
-    left: 100%;
-    margin-left: -12rem;
-    width: 23rem;
-
-    @media screen and (max-width: 1600px) {
-        margin-left: -14rem;
-        top: 3rem;
-    }
-    @media screen and (max-width: 1280px) {
-       
-        top: 2rem;
-    }
-  
+    margin-top: 2rem;
 
     @include breakpoint(mobile) {
-        top: 1.8rem;
-        margin-left: -10rem;
-        width: 18rem;
+        margin-top: 1.5rem;
     }
 }
 
@@ -284,31 +270,7 @@
     }
 }
 
-.team-page__people-card-info-name,
-.team-page__people-card-info-role {
-    @supports (clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%)) {
-        &::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: auto;
-            z-index: 1;
-            color: white;
-            clip-path: polygon(0 0, 12rem 0, 12rem 100%, 0 100%);
-            transition: clip-path 0.3s, color 0.2s;
 
-            @media screen and (max-width: 1600px) {
-                clip-path: polygon(0 0, 14rem 0, 14rem 100%, 0 100%);
-            }
-
-            @include breakpoint(mobile) {
-                clip-path: polygon(0 0, 10rem 0, 10rem 100%, 0 100%);
-            }
-        }
-    }
-}
 
 .team-page__more {
     margin-bottom: 4rem;
