@@ -1,5 +1,6 @@
 
 .team {
+    margin-bottom: 5rem;
     @include breakpoint(mobile) {
         margin-bottom: 7rem;
     }

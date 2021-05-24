@@ -3512,9 +3512,11 @@ select:-webkit-autofill:focus {
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s; }
 
-@media only screen and (max-width: 640px) {
-  .team {
-    margin-bottom: 7rem; } }
+.team {
+  margin-bottom: 5rem; }
+  @media only screen and (max-width: 640px) {
+    .team {
+      margin-bottom: 7rem; } }
 
 .team__content {
   display: -webkit-box;
@@ -11174,7 +11176,7 @@ select:-webkit-autofill:focus {
     color: #183029; }
 
 .our-clients {
-  margin-bottom: 15rem; }
+  margin-bottom: 12rem; }
   @media only screen and (max-width: 640px) {
     .our-clients {
       margin-bottom: 6rem; } }
