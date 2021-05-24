@@ -24,19 +24,21 @@
     padding: 10rem 0;
     margin-bottom: 11rem;
     position: relative;
+    padding-bottom: 0;
 
     @include breakpoint(mobile) {
         padding: 0;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
 }
 
 .industry__name {
     font-weight: 500;
-    font-size: 12.6rem;
+
+    font-size: 12rem;
     line-height: 1.2;
     font-family: var(--orchidea);
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     position: relative;
     user-select: none;
 
@@ -48,34 +50,8 @@
     @include breakpoint(mobile) {
         font-size: 3.3rem;
         line-height: 1.2;
-        margin-bottom: 0;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    @supports (clip-path: polygon(0 0, 52rem 0, 52rem 100%, 0 100%)) {
-        color: white;
-        &::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: auto;
-            z-index: 1;
-            color: var(--text-color);
-            clip-path: polygon(0 0, 52rem 0, 52rem 100%, 0 100%);
-            transition: clip-path 0.3s, color 0.2s;
-
-            @include breakpoint(tablet) {
-                clip-path: polygon(0 0, 35rem 0, 35rem 100%, 0 100%);
-            }
-
-            @include breakpoint(mobile) {
-                clip-path: polygon(0 0, 7rem 0, 7rem 100%, 0 100%);
-            }
-        }
+        margin-bottom: 2rem;
+        
     }
 }
 
@@ -83,9 +59,24 @@
     padding-left: 34.5rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 5.2rem;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2rem;
+        height: 1px;
+        width: 28.4rem;
+        background-color: rgba(#183029, .26);
 
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
     @include breakpoint(tablet) {
-        padding-left: 0;
+        padding-left: 0rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -94,96 +85,31 @@
     font-size: 3.2rem;
     line-height: 4.2rem;
     font-family: var(--orchidea);
-    position: relative;
-    user-select: none;
+    
 
     @include breakpoint(mobile) {
         width: 100%;
         font-size: 2.2rem;
         line-height: 3.3rem;
     }
-    @supports (clip-path: polygon(0 0, 17.5rem 0, 17.5rem 100%, 0 100%)) {
-        color: white;
-
-        @include breakpoint(mobile) {
-            color: var(--text-color);
-        }
-        &::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: auto;
-            z-index: 1;
-            color: var(--text-color);
-            clip-path: polygon(0 0, 17.5rem 0, 17.5rem 100%, 0 100%);
-            transition: clip-path 0.3s, color 0.2s;
-
-            @include breakpoint(tablet) {
-                clip-path: polygon(0 0, 35rem 0, 35rem 100%, 0 100%);
-            }
-            @include breakpoint(mobile) {
-                display: none;
-            }
-        }
-    }
+    
 }
 
-.industry__intro-bg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 52rem;
-    right: calc(-1 * (100vw - 100% - var(--sidebar-width, 0)));
-    z-index: -1;
-    pointer-events: none;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    @include breakpoint(tablet) {
-        left: 35rem;
-    }
 
-    @include breakpoint(mobile) {
-        position: relative;
-        left: auto;
-        right: auto;
-        top: auto;
-        bottom: auto;
-        margin-right: calc(-1 * var(--content-padding));
-    }
-    &::after {
-        content: '';
-        background: linear-gradient(0deg, rgba(24, 48, 41, 0.5), rgba(24, 48, 41, 0.5));
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 20;
-    }
-}
 
 .industry__wrapper {
     @include breakpoint(mobile) {
-        padding-left: 7rem;
+        padding-left: 0;
         position: relative;
         margin-bottom: 3rem;
     }
 }
 
-.industry__intro-bg-image {
-    position: absolute;
-    left: 0;
-    top: 0;
+.industry__intro-image {
     width: 100%;
-    height: 100%;
-    filter: grayscale(100%);
+    height: auto;
     @include objectFitCover();
-
-    @include breakpoint(mobile) {
-        position: static;
-    }
+    filter: grayscale(100%);
 }
 
 .industry__large-text-block {
