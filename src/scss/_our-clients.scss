@@ -1,0 +1,69 @@
+.our-clients {
+    margin-bottom: 15rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 6rem;
+    }
+}
+
+.our-clients__heading {
+   
+    
+    padding-left: var(--sidebar-width);
+    margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        padding-left: 0;
+        margin-bottom: 4rem;
+    }
+}
+
+
+.our-clients__slider {
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .swiper-container {
+        overflow: visible;
+    }
+
+    .swiper-wrapper {
+        transition-timing-function: linear!important;
+    }
+
+    .swiper-slide {
+        width: 16rem;
+        height: 8.4rem;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(mobile) {
+            width: 10rem;
+            height: 5rem;
+        }
+        
+    }
+}
+
+.our-clients__slider-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.our-clients__slider-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    filter: grayscale(100%);
+}
