@@ -6549,6 +6549,7 @@ select:-webkit-autofill:focus {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   overflow: hidden;
+  background: #f9f9f9;
   display: block;
   padding-bottom: 140%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3.6rem), calc(100% - 3.6rem) 100%, 0 100%);
