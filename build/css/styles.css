@@ -2864,9 +2864,7 @@ select:-webkit-autofill:focus {
       -ms-flex-align: start;
           align-items: flex-start;
   -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-touch-action: pan-x;
-      touch-action: pan-x; }
+      flex-wrap: nowrap; }
 
 .intro__press-slider-card {
   width: 28.4rem;
@@ -3590,8 +3588,6 @@ select:-webkit-autofill:focus {
           align-items: flex-start;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -ms-touch-action: pan-x;
-      touch-action: pan-x;
   overflow-x: hidden; }
   @media only screen and (max-width: 640px) {
     .team__cards {
@@ -3764,9 +3760,7 @@ select:-webkit-autofill:focus {
       -ms-flex-align: start;
           align-items: flex-start;
   -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-touch-action: pan-x;
-      touch-action: pan-x; }
+      flex-wrap: nowrap; }
 
 .news__card {
   display: -webkit-box;

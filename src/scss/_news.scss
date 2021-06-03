@@ -65,7 +65,11 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: nowrap;
-    touch-action: pan-x;
+    
+
+    @include breakpoint(mobile) {
+
+    }
 }
 
 .news__card {

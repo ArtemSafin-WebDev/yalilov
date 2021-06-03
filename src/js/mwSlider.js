@@ -24,7 +24,9 @@ class CardSlider {
             width: card.offsetWidth
         }));
         this.startX = 0;
+        this.startY = 0;
         this.moveX = 0;
+        this.moveY = 0;
         this.offset = 0;
         this.direction = '';
         this.pointerDown = false;
@@ -70,6 +72,7 @@ class CardSlider {
             return;
         }
         this.startX = event.pageX;
+        this.startY = event.pageY;
         this.pointerDown = true;
 
         if (this.debug) {
@@ -497,8 +500,16 @@ class CardSlider {
         }
 
         this.moveX = event.pageX;
+        this.moveY = event.pageY;
         this.offset = this.moveX - this.startX;
+        
         this.direction = this.offset > 0 ? 'right' : 'left';
+
+        const verticalOffset = this.moveY - this.startY;
+
+        if (Math.abs(verticalOffset) > Math.abs(this.offset)) return;
+
+        console.log('Vertical offset', verticalOffset)
 
         this.translateSlides();
 
@@ -558,7 +569,9 @@ class CardSlider {
         this.offset = 0;
         this.direction = '';
         this.startX = 0;
+        this.startY = 0;
         this.moveX = 0;
+        this.moveY = 0;
         this.thresholdReached = false;
     };
 
