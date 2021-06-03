@@ -11193,20 +11193,28 @@ select:-webkit-autofill:focus {
       margin-bottom: 4rem; } }
 
 .our-clients__slider {
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+  padding-left: var(--sidebar-width); }
   @media only screen and (max-width: 640px) {
     .our-clients__slider {
-      margin-bottom: 5rem; } }
+      margin-bottom: 5rem;
+      padding-left: 0; } }
   .our-clients__slider:last-child {
     margin-bottom: 0; }
   .our-clients__slider .swiper-container {
     overflow: visible; }
   .our-clients__slider .swiper-wrapper {
-    -webkit-transition-timing-function: linear !important;
-            transition-timing-function: linear !important; }
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 6rem;
+    grid-column-gap: 12rem; }
+    @media only screen and (max-width: 640px) {
+      .our-clients__slider .swiper-wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 4rem;
+        grid-column-gap: 8rem; } }
   .our-clients__slider .swiper-slide {
-    width: 16rem;
-    height: 8.4rem;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -11214,14 +11222,9 @@ select:-webkit-autofill:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    @media only screen and (max-width: 640px) {
-      .our-clients__slider .swiper-slide {
-        width: 10rem;
-        height: 5rem; } }
 
 .our-clients__slider-card {
   width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11234,7 +11237,13 @@ select:-webkit-autofill:focus {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  position: relative; }
+  .our-clients__slider-card::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%; }
 
 .our-clients__slider-card-image {
   width: 100%;
@@ -11245,4 +11254,5 @@ select:-webkit-autofill:focus {
      object-position: center;
   display: block;
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%); }
+          filter: grayscale(100%);
+  position: absolute; }
