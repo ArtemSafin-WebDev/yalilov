@@ -19,7 +19,7 @@ export default function footerReveal() {
                     start: 'top bottom-=20%',
                     end: 'bottom bottom',
                     scrub: false,
-                    toggleActions: 'play pause play reverse'
+                    toggleActions: 'play none play reverse'
                 }
             });
 
@@ -54,7 +54,7 @@ export default function footerReveal() {
                     start: 'top bottom-=20%',
                     end: 'bottom bottom',
                     scrub: false,
-                    toggleActions: 'play pause play reverse'
+                    toggleActions: 'play none play reverse'
                 }
             });
 
