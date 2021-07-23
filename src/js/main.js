@@ -36,6 +36,7 @@ import careerAnimations from './careerAnimations';
 import menuForm from './menuForm';
 import secondaryLanguages from './secondaryLanguages';
 import menuMobileAccordions from './menuMobileAccordions';
+import hideMenuLogo from './hideMenuLogo';
 // import ourClientsSlider from './ourClientsSlider';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuForm();
     secondaryLanguages();
     menuMobileAccordions();
+    hideMenuLogo();
     // ourClientsSlider();
 
     const imgLoaded = imagesLoaded(document.querySelector('.page-content'));

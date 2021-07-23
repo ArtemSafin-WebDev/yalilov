@@ -10,6 +10,10 @@ export default function teamSlider() {
             controls.style.display = 'none';
             return;
         }
+        if (window.matchMedia('(max-width: 640px)').matches && cards.length < 3) {
+            controls.style.display = 'none';
+            return;
+        }
         new CardSlider(element);
     });
 }

@@ -640,6 +640,12 @@
         margin-right: auto;
         position: relative;
         z-index: 700;
+        transition: opacity .3s, visibility .3s;
+        .mobile-menu-open &.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s, visibility 0s linear .3s;
+        }
     }
 }
 
