@@ -1876,7 +1876,7 @@ select:-webkit-autofill:focus {
   background-color: #183029;
   color: white;
   z-index: 600;
-  overflow-x: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1889,6 +1889,10 @@ select:-webkit-autofill:focus {
   visibility: hidden;
   -webkit-transition: opacity 0.4s, visibility 0s linear 0.4s;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 .page-header__mobile-menu::-webkit-scrollbar * {
   background: transparent;
@@ -2355,12 +2359,11 @@ select:-webkit-autofill:focus {
     z-index: 700;
     -webkit-transition: opacity 0.3s, visibility 0.3s;
     transition: opacity 0.3s, visibility 0.3s;
-  }
-  .mobile-menu-open .page-header__mobile-logo.hidden {
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
-    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    will-change: opacity;
   }
 }
 

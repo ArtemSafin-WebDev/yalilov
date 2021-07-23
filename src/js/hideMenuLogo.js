@@ -6,11 +6,14 @@ export default function hideMenuLogo() {
 
     if (!menu || !logo) return;
 
-    menu.addEventListener('scroll', event => {
+    const checkScroll = () => {
         if (menu.scrollTop > 80) {
             logo.classList.add('hidden');
         } else {
             logo.classList.remove('hidden');
         }
-    })
+        requestAnimationFrame(checkScroll);
+    };
+
+    requestAnimationFrame(checkScroll);
 }
