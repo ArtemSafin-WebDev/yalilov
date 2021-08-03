@@ -102,7 +102,7 @@ class CardSlider {
             const card = event.target.matches('.js-slider-card') ? event.target : event.target.closest('.js-slider-card');
 
             if (card.classList.contains('active')) return;
-            event.preventDefault();
+            // event.preventDefault();
             if (this.debug) {
                 console.log('Card', card, this.cards);
             }
