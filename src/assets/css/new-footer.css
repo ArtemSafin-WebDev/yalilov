@@ -1,0 +1,181 @@
+.page-footer__achievements {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 6.7rem;
+    margin-top: 10rem;
+}
+
+.page-footer__achievements-heading {
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 5.6rem;
+    font-family: var(--orchidea);
+}
+
+.page-footer__achievements-row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 6.4rem;
+    align-content: flex-start;
+}
+
+@media (max-width: 1470px) {
+    .page-footer__achievements-row {
+        grid-gap: 3rem;
+    }
+}
+
+.page-footer__achievements-col {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2.4rem;
+    grid-template-areas: 'logo text';
+    align-items: flex-start;
+}
+
+.page-footer__achievements-icon-wrapper {
+    flex-shrink: 0;
+    width: 4.8rem;
+    height: 4.8rem;
+    position: relative;
+    grid-area: logo;
+}
+
+.page-footer__achievements-text-content {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-footer__achievements-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.page-footer__achievements-cat-heading {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 2.4rem;
+    font-family: var(--orchidea);
+}
+
+.page-footer__achievements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.page-footer__achievements-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-footer__achievements-card-key {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.page-footer__achievements-card-value {
+    font-size: 1.3rem;
+    display: block;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 110%;
+    margin-bottom: 1.2rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.2s;
+}
+
+@media (hover: hover) {
+    .page-footer__achievements-card-value[href]:hover {
+        text-decoration-color: white;
+    }
+}
+
+.page-footer__achievements-card-value:last-child {
+    margin-bottom: 0;
+}
+
+.page-footer__achievements-card-key:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .page-footer__achievements {
+        padding: 4.8rem 0;
+        margin-bottom: 2.4rem;
+        margin-top: 0;
+    }
+
+    .page-footer__achievements-heading {
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 2.4rem;
+    }
+
+    .page-footer__achievements-row {
+        grid-gap: 2rem;
+        grid-row-gap: 2.4rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+    }
+
+    .page-footer__achievements-col {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: 'logo' 'text';
+        grid-gap: 1.6rem;
+        align-items: stretch;
+        align-content: flex-start;
+    }
+
+    .page-footer__achievements-icon-wrapper {
+        width: 2.4rem;
+        height: 2.4rem;
+        justify-self: flex-start;
+    }
+
+    .page-footer__achievements-cat-heading {
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 1.2rem;
+    }
+
+    .page-footer__achievements-list {
+        gap: 1.2rem;
+    }
+
+    .page-footer__achievements-card-key {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.2rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .page-footer__achievements-card-value {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 110%;
+        margin-bottom: 1.2rem;
+    }
+}
